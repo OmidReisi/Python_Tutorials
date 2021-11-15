@@ -1,4 +1,5 @@
 # keys can be strings or integers or some other data types
+# all keys must have a value even if it's None
 student = {"name": "John", "age": 25, "courses": ["Math", "CompSci"]}
 print(student)
 print(student["courses"])
