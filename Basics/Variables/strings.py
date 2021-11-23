@@ -58,3 +58,6 @@ print(dir(name))
 print(help(str))
 
 print(help(str.count))
+
+# returns the unicode number for a single character
+print(ord("!"))
