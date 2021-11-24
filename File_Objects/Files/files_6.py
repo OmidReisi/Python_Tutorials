@@ -12,4 +12,5 @@ with open(r"./Test/test_6.txt", "w") as f:
     # just like read(), write() also can use seek() to set the position for writing
     f.seek(0)
 
-    f.write("Test")
+    # only overwrites what it needs to and does not affect other characters
+    f.write("R")
