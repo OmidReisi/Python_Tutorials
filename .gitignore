@@ -1,5 +1,6 @@
 __pycache__/
 log/
+File_Objects/Files/Test/
 
 *.pyc
 *.pyo
