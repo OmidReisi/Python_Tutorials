@@ -1,6 +1,7 @@
 __pycache__/
 log/
 File_Objects/Files/Test/
+File_Objects/File_Automation/Renamed_Files/
 
 *.pyc
 *.pyo
