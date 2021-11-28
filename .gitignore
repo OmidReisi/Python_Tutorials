@@ -7,3 +7,7 @@ Standard_Libraries/OS/Test
 *.pyc
 *.pyo
 *.log
+*.env
+Standard_Libraries/PipEnv/requirements.txt
+pipfile
+pipfile.lock
