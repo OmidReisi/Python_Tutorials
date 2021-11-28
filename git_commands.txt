@@ -1,0 +1,31 @@
+git init
+git status
+git add .
+git commit -m ""
+git log
+git rm --cached <filename>
+git rm --cached -r .
+git reset 
+git commit -amend -m "new message"
+git show <commit hash>
+git remote add origin
+git remote remove origin
+git remote set-url origin <url>
+git push -u origin <branch>
+git push
+git pull
+git branch (local branches)
+git branch -r (remote branches)
+git branch -a (all branches)
+git branch <branch name> (create <branch name> branch)
+git checkout <branch name>
+git checkout -b <branch name> (create and switch to new branch)
+git checkout - (switch back to last branch)
+git branch -d <branch name> (delete a local branch)
+git push -d origin <branch name> (delete a remote branch)
+git remote prune origin (removes remote branches that have been deleted)
+git merge <branch 1> (takes the changes from <branch 1> into the current branch)
+git pull -r(--rebase) origin main(this command takes the latest commit from the main branch and then you have to rebase each commit from the current branch on top of it and solve conflicts manually)
+git rebase -continue (move on to next commit for rebasing)
+git push -f (forces the push)
+git pull -f (forces the pull)

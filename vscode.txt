@@ -1,0 +1,141 @@
+settings:
+
+
+{
+    "emmet.includeLanguages": {
+        "typescript": "html",
+        "javascript": "html"
+    },
+    "workbench.colorTheme": "Community Material Theme Darker High Contrast",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.formatOnSave": true,
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "cSpell.enabled": false,
+    "workbench.settings.editor": "json",
+    "workbench.settings.openDefaultSettings": false,
+    "python.pythonPath": "C:\\Users\\Omid\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "python.formatting.provider": "black",
+    // "[python]": {
+    //     "editor.defaultFormatter": "ms-python.python"
+    // },
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.executorMap": {
+        "python": "$pythonPath -u $fullFileName"
+    },
+    "code-runner.showExecutionMessage": false,
+    "code-runner.runInTerminal": true,
+    "code-runner.fileDirectoryAsCwd": true,
+    "code-runner.saveFileBeforeRun": true,
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.defaultInterpreterPath": "C:\\Users\\omid7\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "python.terminal.executeInFileDir": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "restructuredtext.linter.name": "doc8",
+    "files.autoSave": "afterDelay",
+    "sqltools.useNodeRuntime": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.markdownlint": true,
+    },
+    "workbench.startupEditor": "none",
+    "workbench.editor.enablePreview": false,
+    "kite.showWelcomeNotificationOnStartup": false,
+    "files.exclude": {
+        
+        "**/__pycache__": true,
+        "**/*.pyc": true
+    },
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "code-runner.terminalRoot":"/",
+    "powershell.integratedConsole.showOnStartup": false,
+
+ 
+}
+
+
+
+
+
+keyboard shortcuts:
+
+
+// Place your key bindings in this file to override the defaults
+
+[
+  {
+    "key": ".",
+    "command": ""
+  },
+  {
+    "key": "ctrl+shift+r",
+    "command": "code-runner.run"
+  },
+  {
+    "key": "ctrl+shift+c",
+    "command": "workbench.action.terminal.clear"
+  },
+  {
+    "key": "f2",
+    "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "f2",
+    "command": "-renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "f2",
+    "command": "editor.action.rename",
+    "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "f2",
+    "command": "-editor.action.rename",
+    "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+alt+n",
+    "command": "-code-runner.run"
+  },
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+},
+]
+
+
+
+
+extentions:
+
+
+christian-kohler.path-intellisense
+CoenraadS.bracket-pair-colorizer-2
+DavidAnson.vscode-markdownlint
+Equinusocio.vsc-community-material-theme
+Equinusocio.vsc-material-theme
+equinusocio.vsc-material-theme-icons
+esbenp.prettier-vscode
+formulahendry.code-runner
+GrapeCity.gc-excelviewer
+jakob101.RelativePath
+kiteco.kite
+mechatroner.rainbow-csv
+ms-python.python
+ms-python.vscode-pylance
+ms-toolsai.jupyter
+ms-toolsai.jupyter-keymap
+ms-toolsai.jupyter-renderers
+njpwerner.autodocstring
+patbenatar.advanced-new-file
+PKief.material-icon-theme
+sleistner.vscode-fileutils
