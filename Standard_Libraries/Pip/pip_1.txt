@@ -1,0 +1,26 @@
+pip help <command>      //this command shows all availabe commands (if command is given shows switches for that command)
+
+pip search <package name>       //shows a description for that package if it exists(pip search is temporarly down and is getting shut down)
+
+pip list        //show all installed packages in current environment
+
+pip uninstall <package name>        //uninstall the package
+
+pip list --outdated (or pip list -o)        //list all the outdated packages
+
+pip install -U <package name>       //upgrade the package (note that the swithc is upper case U)
+
+pip freeze      //lists installed packages in the requirements format
+
+pip freeze > requirements.txt       //save installed packages in file (pip freeze > ./Standard_Libraries/Pip/requirements.txt)
+
+cat requirements.txt        //show the contents of the file
+
+pip install -r <requirements.txt>       //install packages from a requirements file (note that name does not have to be exactly requirements.txt)
+
+
+
+//pip doesn't have a way to upgrade all packages at once so use this two commands below
+
+alias pip-upgrade="pip freeze --user | cut -d'=' -f1 | xargs -n1 pip install -U"
+alias pip-upgrade-venv="pip freeze | cut -d'=' -f1 | xargs -n1 pip install -U"
