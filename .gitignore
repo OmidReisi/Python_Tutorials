@@ -11,3 +11,4 @@ Standard_Libraries/OS/Test
 Standard_Libraries/PipEnv/requirements.txt
 pipfile
 pipfile.lock
+Standard_Libraries/Pip/requirements.txt
