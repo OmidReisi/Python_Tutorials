@@ -1,0 +1,23 @@
+conda activate base         //active the base environment of ancaconda
+
+conda activate <venv name>      //activae the venv in conda (you have to cd to that directory)
+
+conda deactivate        //deactivate the current venv in conda
+
+conda --help        //list all conda commands
+
+conda list          //list all conda installed packages
+
+conda create --name <venv name> <package1> <package2> ...       //create new venv in cwd with name and install selected packages
+
+conda env list      //list all conda created environments
+
+conda remove --name <venv name> --all       //to completely remove a conda environment (--all swithc is for removeing all packages)
+
+conda install <package name>        //to install a package in conda environment
+
+//to install packages in existing venv activate it and use command above
+
+
+
+conda config --append channels conda-forge      //run this command once in main git bash to add this channel so you can install conda packages
