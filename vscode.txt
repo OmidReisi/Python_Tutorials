@@ -1,6 +1,7 @@
 settings:
 
 
+
 {
     "emmet.includeLanguages": {
         "typescript": "html",
@@ -15,7 +16,6 @@ settings:
     "cSpell.enabled": false,
     "workbench.settings.editor": "json",
     "workbench.settings.openDefaultSettings": false,
-    "python.pythonPath": "C:\\Users\\Omid\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
@@ -23,6 +23,8 @@ settings:
     // "[python]": {
     //     "editor.defaultFormatter": "ms-python.python"
     // },
+    // "python.defaultInterpreterPath": "C:\\Users\\omid7\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "python.defaultInterpreterPath": "$pythonPath -u $fullFileName",
     "code-runner.clearPreviousOutput": true,
     "code-runner.executorMap": {
         "python": "$pythonPath -u $fullFileName"
@@ -35,7 +37,6 @@ settings:
     "python.linting.pylintEnabled": true,
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "python.defaultInterpreterPath": "C:\\Users\\omid7\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
     "python.terminal.executeInFileDir": true,
     "security.workspace.trust.untrustedFiles": "open",
     "restructuredtext.linter.name": "doc8",
@@ -55,9 +56,90 @@ settings:
     "terminal.integrated.defaultProfile.windows": "Git Bash",
     "code-runner.terminalRoot":"/",
     "powershell.integratedConsole.showOnStartup": false,
+    "restoreTerminals.runOnStartup": false,
+    "terminal.integrated.persistentSessionReviveProcess": "never",
 
- 
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash",
+            "icon": "code",
+            "color": "terminal.ansiYellow"
+        },
+        "Home": {
+            "overrideName": true,
+            "source": "Git Bash",
+            "icon": "home",
+            "color": "terminal.ansiBlue"
+        },
+        "Git": {
+            "overrideName": true,
+            "source": "Git Bash",
+            "icon": "github",
+            "color": "terminal.ansiRed"
+        },
+        "Python": {
+            "overrideName": true,
+            "source": "Git Bash",
+            "icon": "code",
+            "color": "terminal.ansiYellow"
+        }
+
+    },
+
+
+    // "terminals.autorun": true,
+    // "terminals.autokill": true,
+    // "terminals.terminals": [
+    //     {
+    //       "name" : "Home",
+    //       "description" : "This Terminal is used for Home directory",
+    //       "cwd" : "C:\\Users\\omid7",
+    //       "shellPath" : "C:\\Program Files\\Git\\bin\\bash.exe",
+    //       "shellArgs" : ["--login"],
+    //       "icon": "code",
+    //     },
+    //     {
+    //       "name": "Git",
+    //       "description": "This Terminal is used for GitHub repository",
+    //       "cwd" : "E:\\Python_Tutorials",
+    //       "shellPath" : "C:\\Program Files\\Git\\bin\\bash.exe",
+    //       "shellArgs" : ["--login"],
+    //       "icon" : "code",
+
+    //     },
+    //     {
+    //       "name": "Python",
+    //       "description": "This Terminal is used for running python files",
+    //       "cwd" : "E:\\Python_Tutorials",
+    //       "shellpath" : "C:\\Program Files\\Git\\bin\\bash.exe",
+    //       "shellArgs": ["--login"]
+
+
+
+    //     }
+    // ],
+
+
+
+
+
+
 }
+
+
+
 
 
 
@@ -109,8 +191,32 @@ keyboard shortcuts:
     "key": "ctrl+tab",
     "command": "workbench.action.terminal.focusNext",
     "when": "terminalFocus"
-},
+  },
+  {
+    "key": "ctrl+w",
+    "command": "workbench.action.terminal.killEditor",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-workbench.action.terminal.killEditor",
+    "when": "terminalEditorFocus && terminalFocus && terminalHasBeenCreated && resourceScheme == 'vscode-terminal' || terminalEditorFocus && terminalFocus && terminalProcessSupported && resourceScheme == 'vscode-terminal'"
+  },
+  {
+    "key": "ctrl+shift+r",
+    "command": "python.execInTerminal"
+  }
 ]
+
 
 
 
@@ -125,7 +231,7 @@ Equinusocio.vsc-community-material-theme
 Equinusocio.vsc-material-theme
 equinusocio.vsc-material-theme-icons
 esbenp.prettier-vscode
-formulahendry.code-runner
+fabiospampinato.vscode-terminals
 GrapeCity.gc-excelviewer
 jakob101.RelativePath
 kiteco.kite
