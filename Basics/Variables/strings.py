@@ -61,3 +61,9 @@ print(help(str.count))
 
 # returns the unicode number for a single character
 print(ord("!"))
+
+print()
+
+print(message_1.split("l", maxsplit=1))
+
+print(message_1.strip("Hello"))
