@@ -25,6 +25,7 @@ git reset       //remove all files from the staging area
    
 git commit -m "message"     //commit the files from the staging area with a message  
 git log     //see the history of your commits and all commit hashes with the head for current branch
+git log --stat      //see the history of your commits with each commit's files(each commits shows which files has it added or modified)
 
 git clone <url> <where to clone>        //in order to clone an existing project and track it with a local repository as well (git clone will exclude files in .gitignore)
 git remote -v       //show the remote repository of a local repository
@@ -46,13 +47,37 @@ git branch --no-merged      //opposite of git branch --merged
 git merge <branch>          //takes the changes from the given branch and merges into the current branch (changes from the given branch are copied to the current branch)
 
 git branch -d <branch>      //delete the given local branch after merge
-git push origin --delete <branch>       //delete the given remote branch     
+git push origin --delete <branch>       //delete the given remote branch
+
+git checkout <file>         //revert the changes for the given file if it is not staged or commited yet(reverts the file to it's last commit)
+//if you have staged the file you can unstage it with git reset and then run the command above
+
+git commit -amend -m "new message"      //if you have commited with the wrong message this command lets you fix your last commit message
+//note that amending a commit changes the hash for that commit which means that it changes the git history
+
+//in order to add new files to the last commit without creating a new commit first you have to stage the files and run the command below
+git commit --amend      //this command opens a editor that lets you completely modify your last commit
+
+//if you have commited to the wrong branch then take the commit hash and checkout to the desired branch and run the command below
+git cherry-pick <commit hash>       //this creats a new commit to the new branch with a different hash
+
+//there are 3 types of git reset <hash> and the default is git reset --mixed (if no switch is given) note that the hash is for the commit you want to go to not the commit you want to delete (the hash you select is the commit the keeps the changes of that commit)
+git reset --soft <hash>         //remove the commits after the hash and keep all the changes after the hash in stage area
+git reset <hash>        //remove the commits after the hash and keep all the changes after the hash in working directory as unstaged
+git reset --hard <hash>     //remove the commits after the hash and deletes all the changes after the hash from the working directory for tracked files (doesn't touch the untracked files)
+git clean -df       //deletes all the untracked files and directories (d switch is for directories and f switch is for forcing the command)
 
 
+//if you accidently delte changes with git reset --hard you have sometime before the git garbage collector completely removes that commit (usually it is 30 days)
+git reflog      //this shows a list of commits that head has pointed to and shows the history of commands in order
+//take the commit that you have deleted from the git reflog and checout to it
+git checkout <hash>     //go to the given commit hash (note that in this state your are not in a branch and you're at detached HEAD state and you should create a new branch to save your deleted changes)
+git branch backup       //create a new backup branch (name doesn't have to be backup exactly) to revert the deleted changes from the detached HEAD
+//then you can checkout to your desired brach and your recovery changes are in your backup branch
 
-
-
-
+//up untill now we have fixed our situations with changing the git history but changing git history is not recommended if other's have already pulled your changes. basically change the git history if you're the only one that has access to does changes
+git revert <hash>       //use this if others have already accessd the git history and this command creates a new command on top and says that from the given hash (including the given hash) forward all changes are removed but all the commits stay in git history
+git diff <hash1> <hash2> compare changes from two given commits
 
 gitk --all
 
@@ -60,7 +85,7 @@ gitk --all
 git rm --cached <filename>
 git rm --cached -r .
 
-git commit -amend -m "new message"
+
 git show <commit hash>
 git remote add origin
 git remote remove origin
