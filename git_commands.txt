@@ -49,7 +49,8 @@ git merge <branch>          //takes the changes from the given branch and merges
 git branch -d <branch>      //delete the given local branch after merge
 git push origin --delete <branch>       //delete the given remote branch
 
-git checkout <file>         //revert the changes for the given file if it is not staged or commited yet(reverts the file to it's last commit)
+git checkout -- <file>         //revert the changes for the given file if it is not staged or commited yet but doesn't touch the untracked files (reverts the file to it's last commit)
+git checkout -- .       //like the command above but works for all files instead (same as above this doesn't touch untracked files)
 //if you have staged the file you can unstage it with git reset and then run the command above
 
 git commit -amend -m "new message"      //if you have commited with the wrong message this command lets you fix your last commit message
@@ -65,6 +66,7 @@ git cherry-pick <commit hash>       //this creats a new commit to the new branch
 git reset --soft <hash>         //remove the commits after the hash and keep all the changes after the hash in stage area
 git reset <hash>        //remove the commits after the hash and keep all the changes after the hash in working directory as unstaged
 git reset --hard <hash>     //remove the commits after the hash and deletes all the changes after the hash from the working directory for tracked files (doesn't touch the untracked files)
+//using any of the git reset without any hash does the same trick on with last commit hash on that branch
 git clean -df       //deletes all the untracked files and directories (d switch is for directories and f switch is for forcing the command)
 
 
@@ -78,6 +80,21 @@ git branch backup       //create a new backup branch (name doesn't have to be ba
 //up untill now we have fixed our situations with changing the git history but changing git history is not recommended if other's have already pulled your changes. basically change the git history if you're the only one that has access to does changes
 git revert <hash>       //use this if others have already accessd the git history and this command creates a new command on top and says that from the given hash (including the given hash) forward all changes are removed but all the commits stay in git history
 git diff <hash1> <hash2> compare changes from two given commits
+
+
+//stashing is used for when you have made some changes and you're not ready to commit but you have to checkout to a different branch and this stash keeps your code temporaraly safe untill you come back and commit the changes.
+//git stash is same as git stash save but if you need to use any switches you have to use git stash save
+
+git stash save "message"        //stash the changes of tracked files with a given message
+git stash save "message"        //stash the changes of all files (tracked or untracked)
+git stash list          //lists all the stashes with their ID's and which branch they were stashed on
+git stash apply <stash ID>      //apply the changes of stash to your current branch (doesn't remove the stash the list)
+// not that stashes or stored in a stack and not a queue so the last stash gets the first ID.
+git stash pop       //applies the changes from the latest stash to the current branch and remove the stash from the list
+
+git stash drop <stash ID>       //removes a stash from the list without saving it's changes to the branch
+git stash clear         //remove the stash list completely
+
 
 gitk --all
 
