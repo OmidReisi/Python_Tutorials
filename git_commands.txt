@@ -90,6 +90,7 @@ git stash save "message"        //stash the changes of all files (tracked or unt
 git stash list          //lists all the stashes with their ID's and which branch they were stashed on
 git stash apply <stash ID>      //apply the changes of stash to your current branch (doesn't remove the stash the list)
 // not that stashes or stored in a stack and not a queue so the last stash gets the first ID.
+//note that you can apply stashes to any branch as long as that branch is not behind on commits from the moment the stash was created on a different branch.
 git stash pop       //applies the changes from the latest stash to the current branch and remove the stash from the list
 
 git stash drop <stash ID>       //removes a stash from the list without saving it's changes to the branch
