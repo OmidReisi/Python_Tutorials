@@ -1,30 +1,79 @@
-git init
-git status
-git add .
-git commit -m ""
-git log
+git --version
+
+git config --global user.name "name"
+git config --global user.email "email"
+git config --list
+git config --list --show-origin
+
+git help <verb>         //git help config
+git <verb> --help       //git config --help
+
+rm -rf .git         //in order to remove .git directory and stop tracking our project
+
+touch .gitignore        //create a simple text file that tell git which files and folders shouldn't be tracked
+
+git init        //initialize a local git repository
+git status      //see the current status of your repository and not tracked files and staged files
+
+git add <file>      //add a file to the staging area
+git add .       //add all files downward from CWD
+git add -A      //add all files of the tracked project no matter the CWD
+
+git reset <file>        //remove a file from the staging area(before committing the file)
+git reset       //remove all files from the staging area
+
+   
+git commit -m "message"     //commit the files from the staging area with a message  
+git log     //see the history of your commits and all commit hashes with the head for current branch
+
+git clone <url> <where to clone>        //in order to clone an existing project and track it with a local repository as well(git clone will exclude files in .gitignore)
+git remote -v       //show the remote repository of a local repository
+git branch -a       //show all branches (local or remote branches)
+
+git diff <branch>       //shows all the differences of current branch with the given branch
+git diff        //shows all the differences of current from the last commit
+git pull origin <branch>        //pull the latest changes of the given branch of remote repository
+git push origin <branch>        //push the latest changes to the given branch of remote repository
+
+git branch <name>       //create a new local branch with the given name
+git checkout <name>     //change the current branch to the given branch name
+git push -u origin <branch>         //set the upstream for the current local branch(links the current branch with a remote branch of the given name so that in later usage you can use git push and git pull alone and git automaically recognizes the link between the local and remote branch)
+
+git branch --merged <branch>        //list branches merged into the given branch
+git branch --merged         //list branches merged into HEAD (i.e. tip of current branch)
+git branch --no-merged      //opposite of git branch --merged
+
+git merge <branch>          //takes the changes from the given branch and merges into the current branch(changes from the given branch are copied to the current branch)
+
+git branch -d <branch>      //delete the given local branch after merge
+git push origin --delete <branch>       //delete the given remote branch     
+
+
+
+
+
+
+
+gitk --all
+
+
 git rm --cached <filename>
 git rm --cached -r .
-git reset 
+
 git commit -amend -m "new message"
 git show <commit hash>
 git remote add origin
 git remote remove origin
 git remote set-url origin <url>
-git push -u origin <branch>
 git push
 git pull
 git branch (local branches)
 git branch -r (remote branches)
-git branch -a (all branches)
-git branch <branch name> (create <branch name> branch)
-git checkout <branch name>
+
+
 git checkout -b <branch name> (create and switch to new branch)
 git checkout - (switch back to last branch)
-git branch -d <branch name> (delete a local branch)
-git push -d origin <branch name> (delete a remote branch)
 git remote prune origin (removes remote branches that have been deleted)
-git merge <branch 1> (takes the changes from <branch 1> into the current branch)
 git pull -r(--rebase) origin main(this command takes the latest commit from the main branch and then you have to rebase each commit from the current branch on top of it and solve conflicts manually)
 git rebase -continue (move on to next commit for rebasing)
 git push -f (forces the push)
