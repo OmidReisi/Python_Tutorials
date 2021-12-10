@@ -17,7 +17,12 @@ git status      //see the current status of your repository and not tracked file
 
 git add <file>      //add a file to the staging area
 git add .       //add all files downward from CWD
-git add -A      //add all files of the tracked project no matter the CWD
+git add -A (git add --all)     //add all files of repository to the staging area
+git add <path>      //add all the files downward from the path to the staging area
+git add --no-all <path>     //same as above but ignores the deleted files
+git add -u       //same as git add -A but ignores the untracked files (only adds modified and deleted files)
+git add -u <path>       //same as above but downward from the path
+
 
 git reset <file>        //remove a file from the staging area (before committing the file)
 git reset       //remove all files from the staging area
@@ -95,6 +100,8 @@ git stash pop       //applies the changes from the latest stash to the current b
 
 git stash drop <stash ID>       //removes a stash from the list without saving it's changes to the branch
 git stash clear         //remove the stash list completely
+
+
 
 
 gitk --all

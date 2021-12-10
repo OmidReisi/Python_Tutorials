@@ -2,12 +2,12 @@ settings:
 
 
 
+
 {
     "emmet.includeLanguages": {
         "typescript": "html",
         "javascript": "html"
     },
-    "workbench.colorTheme": "Community Material Theme Darker High Contrast",
     "workbench.iconTheme": "material-icon-theme",
     "editor.formatOnSave": true,
     "[typescript]": {
@@ -24,6 +24,10 @@ settings:
     //     "editor.defaultFormatter": "ms-python.python"
     // },
     // "python.defaultInterpreterPath": "C:\\Users\\omid7\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "editor.detectIndentation" : false,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+
     "python.defaultInterpreterPath": "$pythonPath -u $fullFileName",
     "code-runner.clearPreviousOutput": true,
     "code-runner.executorMap": {
@@ -97,6 +101,8 @@ settings:
         }
 
     },
+    "workbench.colorTheme": "Community Material Theme Darker High Contrast",
+    "material-icon-theme.folders.color": "#90a4ae",
 
 
     // "terminals.autorun": true,
@@ -137,6 +143,9 @@ settings:
 
 
 }
+
+
+
 
 
 
@@ -214,6 +223,26 @@ keyboard shortcuts:
   {
     "key": "ctrl+shift+r",
     "command": "python.execInTerminal"
+  },
+  {
+    "key": "end",
+    "command": "cursorEnd",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "end",
+    "command": "-cursorEnd",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "home",
+    "command": "cursorHome",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "home",
+    "command": "-cursorHome",
+    "when": "textInputFocus"
   }
 ]
 
@@ -221,7 +250,8 @@ keyboard shortcuts:
 
 
 
-extentions:
+
+extentions: (code --list-extentions)
 
 
 christian-kohler.path-intellisense
@@ -231,7 +261,6 @@ Equinusocio.vsc-community-material-theme
 Equinusocio.vsc-material-theme
 equinusocio.vsc-material-theme-icons
 esbenp.prettier-vscode
-fabiospampinato.vscode-terminals
 GrapeCity.gc-excelviewer
 jakob101.RelativePath
 kiteco.kite

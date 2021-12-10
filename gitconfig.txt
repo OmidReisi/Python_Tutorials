@@ -1,0 +1,14 @@
+[core]
+	editor = code --wait --new-window
+    tabsize = 4
+[user]
+	name = OmidReisi
+	email = omid79.dg@gmail.com
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+	tool = vscode
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
