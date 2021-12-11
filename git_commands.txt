@@ -37,7 +37,7 @@ git remote -v       //show the remote repository of a local repository
 git branch -a       //show all branches (local or remote branches)
 
 git diff <branch>       //shows all the differences of current branch with the given branch
-git diff        //shows all the differences of current from the last commit
+git diff        //shows all the differences of current branch from the last commit
 git pull origin <branch>        //pull the latest changes of the given branch of remote repository
 git push origin <branch>        //push the latest changes to the given branch of remote repository
 
@@ -91,7 +91,7 @@ git diff <hash1> <hash2> compare changes from two given commits
 //git stash is same as git stash save but if you need to use any switches you have to use git stash save
 
 git stash save "message"        //stash the changes of tracked files with a given message
-git stash save "message"        //stash the changes of all files (tracked or untracked)
+git stash save -u "message"        //stash the changes of all files (tracked or untracked)
 git stash list          //lists all the stashes with their ID's and which branch they were stashed on
 git stash apply <stash ID>      //apply the changes of stash to your current branch (doesn't remove the stash the list)
 // not that stashes or stored in a stack and not a queue so the last stash gets the first ID.
