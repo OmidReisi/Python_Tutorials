@@ -20,7 +20,6 @@ pip install -r <requirements.txt>       //install packages from a requirements f
 
 
 
-//pip doesn't have a way to upgrade all packages at once so use this two commands below
+//pip doesn't have a way to upgrade all packages at once so use this command below
 
-alias pip-upgrade="pip freeze --user | cut -d'=' -f1 | xargs -n1 pip install -U"
-alias pip-upgrade-venv="pip freeze | cut -d'=' -f1 | xargs -n1 pip install -U"
+alias pip-upgrade="pip freeze | cut -d'=' -f1 | xargs -n1 pip install -U"

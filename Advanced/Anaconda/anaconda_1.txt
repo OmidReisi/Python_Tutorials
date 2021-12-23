@@ -12,7 +12,7 @@ conda create --name <venv name> <package1> <package2> ...       //create new ven
 
 conda env list      //list all conda created environments
 
-conda remove --name <venv name> --all       //to completely remove a conda environment (--all swithc is for removeing all packages)
+conda remove --name <venv name> --all       //to completely remove a conda environment (--all switch is for removeing all packages)
 
 conda install <package name>        //to install a package in conda environment
 

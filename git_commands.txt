@@ -83,7 +83,7 @@ git branch backup       //create a new backup branch (name doesn't have to be ba
 //then you can checkout to your desired brach and your recovery changes are in your backup branch
 
 //up untill now we have fixed our situations with changing the git history but changing git history is not recommended if other's have already pulled your changes. basically change the git history if you're the only one that has access to does changes
-git revert <hash>       //use this if others have already accessd the git history and this command creates a new command on top and says that from the given hash (including the given hash) forward all changes are removed but all the commits stay in git history
+git revert <hash>       //use this if others have already accessd the git history and this command creates a new commit on top and says that from the given hash (including the given hash) forward all changes are removed but all the commits stay in git history
 git diff <hash1> <hash2> compare changes from two given commits
 
 
@@ -94,7 +94,7 @@ git stash save "message"        //stash the changes of tracked files with a give
 git stash save -u "message"        //stash the changes of all files (tracked or untracked)
 git stash list          //lists all the stashes with their ID's and which branch they were stashed on
 git stash apply <stash ID>      //apply the changes of stash to your current branch (doesn't remove the stash the list)
-// not that stashes or stored in a stack and not a queue so the last stash gets the first ID.
+// not that stashes are stored in a stack and not a queue so the last stash gets the first ID.
 //note that you can apply stashes to any branch as long as that branch is not behind on commits from the moment the stash was created on a different branch.
 git stash pop       //applies the changes from the latest stash to the current branch and remove the stash from the list
 
