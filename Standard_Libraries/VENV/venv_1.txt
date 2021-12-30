@@ -1,0 +1,27 @@
+//this is a built-in module so you don't need to install anything
+
+//to create a new venv you CD to your location and run the command below
+//python -m runs the module that comes after it as the main module
+python -m venv <venv_name> (<--system-site-packages>)       //the optional swith at the end installs all the packages that are installed in main version of python(this way is not recommanded and it's better to use a requirements.txt file instead)
+
+//to activate a venv environment run the command below (first CD to your venv)
+//the . that comes first is for <. activate> (notice the space between them) and is not for giving path
+. <venv_name>/scripts/activate
+
+//after activating your environment you can do everything you do normally and it is applied to only this venv python
+
+pip list
+pip list --local        //only lists packages that are installed locally in the env (refers to the optional switch --system-site-packages and does not list packages that come from this switch)
+pip insall <package_name>
+pip freeze
+pip freeze --local      //same as pip list --local but in requirements format
+pip freeze > requirements.txt
+pip install -r requirements.txt
+
+
+deactivate      //to deactivate the venv_name
+
+rm -r <venv_name>       //to completely remove the venv
+
+//it is convention to put your virtual environment in a venv directory inside of your project folder and then add your project files outside of venv directory in project folder
+
