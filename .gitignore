@@ -4,6 +4,8 @@ File_Objects/Files/Test/
 File_Objects/File_Automation/Renamed_Files/
 Standard_Libraries/OS/Test
 Data_Mining
+Standard_Libraries/PIL/Original_Images
+Standard_Libraries/PIL/Saved_Images
 .ipynb_checkpoints
 
 *.pyc
@@ -15,3 +17,6 @@ Standard_Libraries/PipEnv/requirements.txt
 pipfile
 pipfile.lock
 Standard_Libraries/Pip/requirements.txt
+Standard_Libraries/PIL/Capture.png
+Standard_Libraries/PIL/Capture.JPG
+Standard_Libraries/PIL/Capture2.JPG
