@@ -6,6 +6,15 @@ Standard_Libraries/OS/Test
 Data_Mining
 Standard_Libraries/PIL/Original_Images
 Standard_Libraries/PIL/Saved_Images
+Standard_Libraries/Shutil/archived_files
+Standard_Libraries/Shutil/Images
+Standard_Libraries/Zipfile/stackoverflow_survey
+Standard_Libraries/Zipfile/Original_Images
+Standard_Libraries/Zipfile/zipfiles
+Standard_Libraries/Zipfile/extractedfiles
+
+
+
 .ipynb_checkpoints
 
 *.pyc
@@ -20,3 +29,4 @@ Standard_Libraries/Pip/requirements.txt
 Standard_Libraries/PIL/Capture.png
 Standard_Libraries/PIL/Capture.JPG
 Standard_Libraries/PIL/Capture2.JPG
+Standard_Libraries/Zipfile/data.zip
