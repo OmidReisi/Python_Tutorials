@@ -2,6 +2,9 @@ from os import name, path
 import zipfile
 from PIL import Image
 
+# this module allows us to create objects from raw data
+import io
+
 with zipfile.ZipFile(file=r"./zipfiles/files_2.zip", mode="r") as my_zip:
 
     # shows the name of files in the zip file
@@ -12,12 +15,16 @@ with zipfile.ZipFile(file=r"./zipfiles/files_2.zip", mode="r") as my_zip:
     # just like members explaind down blow don't use ./ for name of file in zip file
     img = my_zip.open(name=r"Original_Images/image_1.jpg", mode="r")
     img = Image.open(img)
-    img.show()
+    # img.show()
 
     # returns the content of the file in the zip file in bytes
     # you can't actually open image from the return of my_zip.read()
     # this is bytes object and not actually an image object
     img_content = my_zip.read(name=r"Original_Images/image_2.jpg")
+
+    # use io.BytesIO() when you want to create an object from raw data
+    img = Image.open(io.BytesIO(img_content))
+    img.show()
 
     # extracts the zip file to the given path
     # you can specify the memebers argument to specify which files should be extracted
