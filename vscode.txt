@@ -23,12 +23,12 @@ settings:
     // "[python]": {
     //     "editor.defaultFormatter": "ms-python.python"
     // },
-    // "python.defaultInterpreterPath": "C:\\Users\\omid7\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "python.defaultInterpreterPath": "C:\\Users\\omid7\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
     "editor.detectIndentation" : false,
     "editor.insertSpaces": true,
     "editor.tabSize": 4,
 
-    "python.defaultInterpreterPath": "$pythonPath -u $fullFileName",
+    // "python.defaultInterpreterPath": "$pythonPath -u $fullFileName",
     "code-runner.clearPreviousOutput": true,
     "code-runner.executorMap": {
         "python": "$pythonPath -u $fullFileName"
@@ -78,7 +78,7 @@ settings:
         },
         "Git Bash": {
             "source": "Git Bash",
-            "icon": "code",
+            "icon": "terminal-bash",
             "color": "terminal.ansiYellow"
         },
         "Home": {
@@ -103,6 +103,8 @@ settings:
     },
     "workbench.colorTheme": "Community Material Theme Darker High Contrast",
     "material-icon-theme.folders.color": "#90a4ae",
+    "python.terminal.activateEnvironment": false,
+    "bracket-pair-colorizer-2.depreciation-notice": false,
 
 
     // "terminals.autorun": true,
@@ -143,6 +145,9 @@ settings:
 
 
 }
+
+
+
 
 
 
@@ -251,6 +256,7 @@ keyboard shortcuts:
 
 
 
+
 extentions: (code --list-extentions)
 
 
@@ -265,6 +271,7 @@ GrapeCity.gc-excelviewer
 jakob101.RelativePath
 kiteco.kite
 mechatroner.rainbow-csv
+mikestead.dotenv
 ms-python.python
 ms-python.vscode-pylance
 ms-toolsai.jupyter
