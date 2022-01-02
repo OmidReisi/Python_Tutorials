@@ -20,5 +20,8 @@ def display_info(name, age):
     print(f"diplay_info ran with arguments ({name}, {age}")
 
 
+# the above code is the equivalent of display_info = (prefix_decorator("TESTING: "))(display_info)
+# display_info = (prefix_decorator("TESTING: "))(display_info)
+
 display_info("John", 25)
 display_info("Travis", 30)
