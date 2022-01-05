@@ -26,6 +26,9 @@ print(match)
 
 
 # to remove the opening and closing tags we have to access the text attribute of our tag
+# match.string works somehow in the same way but only works if the tag has no children
+# type of .text is "str" but type of .string is "NavigableString" and you can use .parent, .next_sibling(s), previous_sibling(s) on "NavigableString" types
+# you can also modify a tag like match.string = "hello" and this will affect your whole soup object
 print(match.text)
 
 
@@ -47,6 +50,8 @@ print()
 
 # this method returns all the matches it finds for the given specifics as a list
 # you can add class_ or id attributes to define the specifics
+# you can set limit argument for to define a max length for the returned list
+# if you set recursive = False then it only looks for the direct children of your soup to find the given tag
 for article in soup.find_all("div", class_="article"):
     headline = article.h2.a.text
     summary = article.p.text

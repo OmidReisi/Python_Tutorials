@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 
-source = requests.get("http://coreyms.com", timeout=10).text
+source = requests.get(r"http://coreyms.com", timeout=10).text
 
 soup = BeautifulSoup(source, "lxml")
 
