@@ -62,6 +62,10 @@ print(help(str.count))
 # returns the unicode number for a single character
 print(ord("!"))
 
+# opposite of ord() this one takes the unicode number and returns the character
+# 65 is the ascii number of A
+print(chr(65))
+
 print()
 
 print(message_1.split("l", maxsplit=1))
