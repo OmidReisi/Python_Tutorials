@@ -59,8 +59,9 @@ def main(window):
     # to get the size of your main_window use these two below
     # the -1 is for the amount of window you can use
     # always use this method in the main function that you pass to the wrapper
+    # window.getmaxyx() also returns a tuple of (curses.LINES, curses.COLS)
     window_size = (curses.LINES - 1, curses.COLS - 1)
-    print(window_size)
+    print(window_size, window.getmaxxy(), sep="\t")
 
 
 wrapper(main)

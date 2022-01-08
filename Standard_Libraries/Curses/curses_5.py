@@ -10,6 +10,7 @@ def main(window):
 
     # this returns the character itself from the input
     # you can pass a row and column to getkey() or getch() to position the cursor for input
+    # wrapper automaticaly sets the window.keypad(True) but for subwindows if you want .getkey() and .getch() to work you sould set sub_window.keypad(True)
     key = window.getkey()
 
     window.addstr(f"key: {key}")
