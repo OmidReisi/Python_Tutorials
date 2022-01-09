@@ -11,7 +11,7 @@ dt_now = datetime.datetime.now(tz=pytz.UTC)
 
 print(dt_now)
 
-# utxnow method doesn't have a tzinfo argument but it returns a datetime object which it's tzinfo attribute can be replaced by a new value
+# utcnow method doesn't have a tzinfo argument but it returns a datetime object which it's tzinfo attribute can be replaced by a new value
 dt_utcnow = datetime.datetime.utcnow().replace(tzinfo=pytz.UTC)
 
 print(dt_utcnow)
