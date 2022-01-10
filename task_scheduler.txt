@@ -1,0 +1,6 @@
+// in order to set a python script to run in git bash you should follow these 2 steps:
+1.set the program in taskScheduler (taskschd.msc in window RUN) to gitbah ("C:\Program Files\Git\git-bash.exe")
+2.set the argument to -l -c "{python version} {script to run}"
+
+schtasks /?
+// the command above allows us to create task schedules in a terminal (follow along the examples to see how it's done) (use - instead of / if you're useing git bash)
