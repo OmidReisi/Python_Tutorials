@@ -1,4 +1,3 @@
-from os import sep
 from PIL import Image
 import io
 
