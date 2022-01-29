@@ -34,6 +34,6 @@ Standard_Libraries/PIL/Capture.png
 Standard_Libraries/PIL/Capture.JPG
 Standard_Libraries/PIL/Capture2.JPG
 Standard_Libraries/Zipfile/data.zip
-Data_Mining/*.JPG
-Data_Mining/*.zip
-Data_Mining/*.rar
+Data_Mining/*/*.JPG
+Data_Mining/*/*.zip
+Data_Mining/*/*.rar
