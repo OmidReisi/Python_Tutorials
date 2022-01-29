@@ -1,0 +1,25 @@
+// in order to open a jupyter notebook on your local server run this command below(first cd to your desired directory)
+
+jupyter notebook
+
+// the terminal window that you run the command above should stay open  because our notebook is on local host with port 8888 (127.0.0.1:8888)
+
+// the jupyter notebook acts as an interactive python which means you can add "Hello World!" with out using the print() function.
+
+// you can add plain text in your notebook with markdown language. in order to do this you have to set the type of the cell to markdown in cell/type menu.
+
+adding a ! before a command specifies the this is a bash command. (!pip list)
+
+// jypyter has some magic commands as well that are represented by % or %% (some of these magic commands are same as bash commands)
+
+// % commands are also called magic-line commands and %% are called magic-cell commands (line and cell means that the first one has all of it's arguments in one line but the second one means the arguments can be in the whole cell)
+
+// you can see the available magic commands with the command below
+
+%lsmagic
+
+%matplotlib (to show matplotlib plots, but you have to have it installed in your current version of python)
+
+%%html (renders the whole cell as an html)
+
+%%javascript (renders the whole cell as javascript)
