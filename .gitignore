@@ -3,7 +3,6 @@ log/
 File_Objects/Files/Test/
 File_Objects/File_Automation/Renamed_Files/
 Standard_Libraries/OS/Test
-Data_Mining
 Standard_Libraries/PIL/Original_Images
 Standard_Libraries/PIL/Saved_Images
 Standard_Libraries/Shutil/archived_files
@@ -35,3 +34,6 @@ Standard_Libraries/PIL/Capture.png
 Standard_Libraries/PIL/Capture.JPG
 Standard_Libraries/PIL/Capture2.JPG
 Standard_Libraries/Zipfile/data.zip
+Data_Mining/*.JPG
+Data_Mining/*.zip
+Data_Mining/*.rar
