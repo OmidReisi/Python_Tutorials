@@ -1,8 +1,5 @@
 settings:
 
-
-
-
 {
     "emmet.includeLanguages": {
         "typescript": "html",
@@ -64,6 +61,7 @@ settings:
     "terminal.integrated.persistentSessionReviveProcess": "never",
 
     "terminal.integrated.profiles.windows": {
+    
         "PowerShell": {
             "source": "PowerShell",
             "icon": "terminal-powershell"
@@ -98,6 +96,12 @@ settings:
             "source": "Git Bash",
             "icon": "code",
             "color": "terminal.ansiYellow"
+        },
+        "Windows Terminal": {
+            "overrideName": true,
+            "path": "C:\\Users\\omid7\\AppData\\Local\\Microsoft\\WindowsApps\\wt.exe",
+            "icon": "terminal-bash",
+            "color": "terminal.ansiMagenta"
         }
 
     },
@@ -105,6 +109,39 @@ settings:
     "material-icon-theme.folders.color": "#90a4ae",
     "python.terminal.activateEnvironment": false,
     "bracket-pair-colorizer-2.depreciation-notice": false,
+    "tabnine.experimentalAutoImports": true,
+
+    "python.linting.pylintArgs": [
+        "--extension-pkg-whitelist=_curses",
+        "--max-line-length=80",
+        "--disable=W",
+        "--disable=W0142,W0403,W0613,W0232,R0903,R0913,C0103,R0914,C0304,F0401,W0402,E1101,W0614,C0111,C0301"
+    ],
+        
+    
+    // "terminal.integrated.fontFamily": "JetBrainsMonoNL Nerd Font",
+    // "workbench.colorCustomizations": {
+    //         "terminal.background": "#121213",
+    //         "terminal.ansiBlack": "#000000",
+    //         "terminal.ansiBlue": "#424242",
+    //         "terminal.ansiBrightBlack": "#555753",
+    //         "terminal.ansiBrightBlue": "#E82D72",
+    //         "terminal.ansiBrightCyan": "#E82D72",
+    //         "terminal.ansiBrightGreen": "#BAD3CE",
+    //         "terminal.ansiBrightPurple": "#AD7FA8",
+    //         "terminal.ansiBrightRed": "#EF2929",
+    //         "terminal.ansiBrightWhite": "#EEEEEC",
+    //         "terminal.ansiBrightYellow": "#FCE94F",
+    //         "terminal.ansiCyan": "#37FFB5",
+    //         "terminal.foreground": "#FAFFF6",
+    //         "terminal.ansiGreen": "#B0D700",
+    //         "terminal.ansiPurple": "#75507B",
+    //         "terminal.ansiRed": "#FF5C5C",
+    //         "terminal.selectionBackground": "#FFFFFF",
+    //         "terminal.ansiWhite": "#D3D7CF",
+    //         "terminal.ansiYellow": "#C4A000"
+    //     },
+}
 
 
     // "terminals.autorun": true,
@@ -138,20 +175,6 @@ settings:
 
     //     }
     // ],
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
 
 
 
@@ -257,7 +280,10 @@ keyboard shortcuts:
 
 
 
-extentions: (code --list-extentions)
+
+
+
+extentions: (code --list-extensions)
 
 
 christian-kohler.path-intellisense
@@ -265,7 +291,6 @@ CoenraadS.bracket-pair-colorizer-2
 DavidAnson.vscode-markdownlint
 Equinusocio.vsc-community-material-theme
 Equinusocio.vsc-material-theme
-equinusocio.vsc-material-theme-icons
 esbenp.prettier-vscode
 GrapeCity.gc-excelviewer
 jakob101.RelativePath
@@ -280,4 +305,7 @@ ms-toolsai.jupyter-renderers
 njpwerner.autodocstring
 patbenatar.advanced-new-file
 PKief.material-icon-theme
+ritwickdey.LiveServer
 sleistner.vscode-fileutils
+TabNine.tabnine-vscode
+zhuangtongfa.material-theme

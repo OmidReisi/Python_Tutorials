@@ -3,3 +3,4 @@
 alias pyconda='winpty C:\\ProgramData\\Anaconda3\\python.exe'
 alias python='winpty python'
 alias pip-upgrade="pip freeze | cut -d'=' -f1 | xargs -n1 pip install -U"
+alias ls="lsd"
