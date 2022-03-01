@@ -9,7 +9,7 @@ RGB_Color = namedtuple("RGB_Color", ["Red", "Green", "Blue"])
 
 BLACK: RGB_Color = RGB_Color(0, 0, 0)
 WHITE: RGB_Color = RGB_Color(255, 255, 255)
-GREEN: RGB_Color = RGB_Color(0, 255, 0)
+DARK_GREEN: RGB_Color = RGB_Color(0, 150, 0)
 YELLOW: RGB_Color = RGB_Color(255, 255, 0)
 LIGHT_BLUE: RGB_Color = RGB_Color(100, 149, 237)
 RED: RGB_Color = RGB_Color(188, 39, 50)
@@ -35,12 +35,13 @@ class Planet:
 
     def __init__(
         self,
+        name: str,
         color: tuple[int, int, int],
         radius: int,
         pos: tuple[float, float],
         mass: float,
     ) -> None:
-        """for creating a Planet with the given color, radius. also defining self.x_vel and self.y_vel for the velocity of the planet movement.
+        """for creating a Planet with the given name,color, radius. also defining self.x_vel and self.y_vel for the velocity of the planet movement.
 
         Args:
             color (tuple[int, int]): the color of the planet
@@ -48,6 +49,7 @@ class Planet:
             pos (tuple[int, int]): the position for the planet to place on the screen
             mass (int): weight of the planet in (kg)
         """
+        self.name: str = name
         self.color: tuple[int, int, int] = color
         self.radius: int = radius
         self.pos: tuple[float, float] = pos
@@ -83,12 +85,18 @@ class Planet:
 
         if not self.IS_SUN:
             distance_surface: pygame.surface.Surface = text_font.render(
-                f"{round(self.distance_to_sun/1000,1)}km", True, GREEN
+                f"{self.name}: {round(self.distance_to_sun/1000,1)}km", True, DARK_GREEN
             )
             distance_rect: pygame.rect.Rect = distance_surface.get_rect(
                 center=(x_pos, y_pos)
             )
             screen.blit(distance_surface, distance_rect)
+        else:
+            text_surface: pygame.surface.Surface = text_font.render(
+                f"{self.name}", True, DARK_GREEN
+            )
+            text_rect: pygame.rect.Rect = text_surface.get_rect(center=(x_pos, y_pos))
+            screen.blit(text_surface, text_rect)
 
     def attraction_force(self, other: Planet) -> tuple[float, float]:
         """for calculating the force of attraction between two planets and calculating this force in x,y axis.
@@ -155,20 +163,20 @@ def main():
     run: bool = True
     clock: pygame.time.Clock = pygame.time.Clock()
 
-    sun: Planet = Planet(YELLOW, 30, (0, 0), 1.98892e30)
+    sun: Planet = Planet("SUN", YELLOW, 30, (0, 0), 1.98892e30)
     sun.IS_SUN = True
 
-    earth: Planet = Planet(LIGHT_BLUE, 16, (-1 * Planet.AU, 0), 5.9742e24)
+    earth: Planet = Planet("EARTH", LIGHT_BLUE, 16, (-1 * Planet.AU, 0), 5.9742e24)
     # if there was no y_vel for the planets the only velocity would be the force of attraction they would just be absorbed by the sun.
     earth.y_vel = 29.783e3
 
-    mars: Planet = Planet(RED, 12, (-1.524 * Planet.AU, 0), 6.39e23)
+    mars: Planet = Planet("MARS", RED, 12, (-1.524 * Planet.AU, 0), 6.39e23)
     mars.y_vel = 24.077e3
 
-    mercury: Planet = Planet(DARK_GRAY, 8, (0.387 * Planet.AU, 0), 0.330e24)
+    mercury: Planet = Planet("MERCURY", DARK_GRAY, 8, (0.387 * Planet.AU, 0), 0.330e24)
     mercury.y_vel = -47.4e3
 
-    venus: Planet = Planet(WHITE, 14, (0.723 * Planet.AU, 0), 4.8685e24)
+    venus: Planet = Planet("VENUS", WHITE, 14, (0.723 * Planet.AU, 0), 4.8685e24)
     venus.y_vel = -35.02e3
 
     planets: list[Planet] = [sun, earth, mars, mercury, venus]
