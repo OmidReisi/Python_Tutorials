@@ -1,0 +1,17 @@
+games are just like movies in the sense that they are images (or 3d models for 3d games) shown on the screen with a fast rate (usually it's 30-60 frames per second)
+the most important difference is that movies are static images that exist before they are put together but games are dynamic images that are created during the process.
+one more major difference is that games are dependant on the user input.
+basically every image in a game is created with the following two steps.
+
+1. checking player input (or a timer if a game is timed).this is also known as the event loop.
+2.use the input information to place elements on the screen.
+
+these 2 steps is repeated to generate every image for a game.
+
+one concept that is very important is that based on the power of different computers and the complexity of the game different computers will run the game in different fps.
+so to control this flow usually we need to set a minimum and maximum fps for our game.
+
+in order to disply anything in pygame you must use surfaces.
+there are two kinds of surfaces in pygame:
+1. The Display surface: it's the main window that is shown to the user.the display surface is always unique (there can only be one display surface) and is always visible.
+2. Regular surface: these are the different surfaces that are used to display different elements by connecting them to the display surface.regular surfaces are flexible and are only visible when they're connected to the display surface.
