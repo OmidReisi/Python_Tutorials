@@ -1,5 +1,6 @@
 settings:
 
+
 {
     "emmet.includeLanguages": {
         "typescript": "html",
@@ -36,6 +37,7 @@ settings:
     "code-runner.saveFileBeforeRun": true,
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
+    "python.analysis.typeCheckingMode": "basic",
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "python.terminal.executeInFileDir": true,
@@ -100,7 +102,7 @@ settings:
         "Windows Terminal": {
             "overrideName": true,
             "path": "C:\\Users\\omid7\\AppData\\Local\\Microsoft\\WindowsApps\\wt.exe",
-            "icon": "terminal-bash",
+            "icon": "terminal-cmd",
             "color": "terminal.ansiMagenta"
         }
 
@@ -112,10 +114,9 @@ settings:
     "tabnine.experimentalAutoImports": true,
 
     "python.linting.pylintArgs": [
-        "--extension-pkg-whitelist=_curses",
+        "--extension-pkg-whitelist=_curses,pygame",
         "--max-line-length=80",
-        "--disable=W",
-        "--disable=W0142,W0403,W0613,W0232,R0903,R0913,C0103,R0914,C0304,F0401,W0402,E1101,W0614,C0111,C0301"
+        "--disable=W1514,W0611,W0142,W0403,W0613,W0232,R0903,R0913,C0102,C0103,R0914,C0304,F0401,W0402,E1101,W0614,C0111,C0301,C0114,C0115,C0116"
     ],
         
     
@@ -271,7 +272,17 @@ keyboard shortcuts:
     "key": "home",
     "command": "-cursorHome",
     "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.terminal.focus"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
   }
+
 ]
 
 
