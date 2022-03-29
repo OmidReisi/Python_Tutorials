@@ -1,6 +1,6 @@
-. /c/ProgramData/Anaconda3/etc/profile.d/conda.sh
+. /c/Users/omid7/anaconda3/etc/profile.d/conda.sh
 
-alias pyconda='winpty C:\\ProgramData\\Anaconda3\\python.exe'
+alias pyconda='winpty C:\\Users\\omid7\\anaconda3\\python.exe'
 alias python='winpty python'
 alias pip-upgrade="pip freeze | cut -d'=' -f1 | xargs -n1 pip install -U"
 alias ls="lsd"
