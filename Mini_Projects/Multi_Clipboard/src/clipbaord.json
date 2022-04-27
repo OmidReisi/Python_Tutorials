@@ -1,0 +1,5 @@
+{
+  "": "key = input(\"Enter a key to store data: \")",
+  "clip_1": "Redefining name 'data' from outer scope",
+  "test": "key = input(\"Enter a key to fetch it's data: \")"
+}
