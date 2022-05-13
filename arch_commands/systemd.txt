@@ -1,0 +1,41 @@
+//systemd allows you to manage the services that are running on your server or workstation
+
+//services, units, daemons are all the same thing and mostly refres to package name
+
+//the main command of systemd is systemctl that is short for systemcontrol
+
+
+systemctl       //show all the services that are available on your system
+
+systemctl status <unit>     //see the status of unit and if it's running
+
+//if a unit is set to disabled, then it need to be activated manually everytime you want to run it and won't auto start automatically
+
+
+sudo systemctl enable <unit>        //set a unit to enabled, so that it auto starts automatically everytime server or workstation restarts
+
+sudo systemctl disable <unit>       //set a unit to disabled, so that it won't auto start automatically everytime server or workstation restarts
+
+sudo systemctl start <unit>     //start a unit up (set it to active)
+
+sudo systemctl stop <unit>      //stop a unit up (set it to deactive)
+
+sudo systemctl restart <unit>      //restarts a unit(usually used after changing it's configuration)
+
+sudo systemctl reload <unit>        //unlike restart it doesn't stop the service but takes advantage of the new configuration
+
+sudo systemctl enable --now <unit> //enable and start(activatee) a unit
+
+//you can run a systemctl command for a specific user by adding @<username> after the <unit>
+
+sudo systemctl start <unit>@<user>      //start a unit for the given user only
+
+systemctl list-unit-files --type=<type>     //list unit files that are of a given type in a nice organized list(most useful type is service)
+
+//unit files are stored in /usr/lib/systemd/system directory and you can edit them to customize your service
+
+
+journalctl -u <unit>        //show the logs for that unit
+
+journalctl -fu <unit>       //show the logs for that unit and watch live for new logs (follow the logs)
+

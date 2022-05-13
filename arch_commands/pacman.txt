@@ -1,0 +1,19 @@
+pacman -Syu         //full system upgrade (it's better to run this command regularly)
+
+pacman -Syy         //force the local mirrorlist to be updataed (/etc/pacman.d/mirrorlist)
+
+// to generate a mirrorlist you can visit https://archlinux.org/mirrorlist and generate a mirrorlist by selecting countries you want and server protocols (check the "use mirror status" box)
+// then back up your current mirrorlist with cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
+//then truncate the original mirrorlist with truncate -s 0 mirrorlist (setting the file size to 0)
+//paste the generated mirrorlist in and uncomment some of the servers
+//finally run pacman -Syy to make sure changes take effect
+
+pacman -S <pkg1> <pkg2> ...     //install any number of packages
+
+pacman -R <pkg1> <pkg2> ... //remove any number of packages(use pacman -Rs to remove dependancies that are not used anymore as well)
+
+pacman -Ss <keyword>        //search for a package name by passing a keyword
+
+pacman -Qdt     //show orphan packages (orphan packages are dependancies that are not needed anymore and it's better to clean them up)
+
+pacman -U <path to package>     //install a pacakge the is stored in your local machine

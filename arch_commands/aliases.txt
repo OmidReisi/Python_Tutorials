@@ -1,0 +1,18 @@
+//alias is an shortcut for the command(usually long commands) to use instead of it
+
+alias {alias name}=<command in double quotes> (like alias li="ls -la")      //creating an alias
+
+alias       //list all created aliases (user or system created aliases)
+
+unalias {alias name}        //removes the alias
+
+
+//if you use a {alias name} same as a command that already exists, the alias overwrites the original command
+
+
+alias {alias name}      //show the alias for the alias name
+
+
+
+
+

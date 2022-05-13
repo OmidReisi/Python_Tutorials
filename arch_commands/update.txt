@@ -1,0 +1,22 @@
+// for debian based distributions follow(like ubuntu,mint):
+
+sudo apt update     //update local mirror list(package index)
+sudo apt dist-upgrade       //upgrade all apps
+
+
+
+
+// for centos, redhat, fedora follow:(for older versions use yum instead of dnf)
+
+sudo dnf update     //update packages and package index all at once
+
+
+
+// for arch based distributions follow:(like archlinux,manjaro):
+
+sudo pacman -Syyy       //force full sync with package index
+
+sudo pacman -Syu        //install all updates
+
+
+//remember to reboot after updates no matter the distribution

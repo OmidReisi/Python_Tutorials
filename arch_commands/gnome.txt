@@ -1,0 +1,8 @@
+// gnome (pronounced "nome") is one of the best desktop environments for linux
+
+//gnome supports dynamic workspaces and you can have multiple desktops working at the same time (there is always an empty desktop)
+
+//you can switch desktops with super(win key)+page_up or super+page_down
+
+// pressing the super button brings up the activity menu
+

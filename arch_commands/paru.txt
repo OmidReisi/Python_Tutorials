@@ -1,0 +1,22 @@
+//paru is an AUR helper that is used to install packages from AUR
+//install paru with the cloning it's git repository and running makepkg -si on the directory containing PKGBUILD
+
+
+
+
+
+paru         //Alias for paru -Syu (upgrades all the packages on the system)
+
+paru -S <package>         //Install a specific package (removing the the switch does the same thing)
+
+paru -Sua        //Upgrade AUR packages only
+
+paru -Qua        //Print available AUR updates
+
+paru -R <package>       //Remove a package
+
+paru -c     //clear all dependancies that are not needed anymore
+
+paru -Ui         //Build and install a PKGBUILD in the current directory
+
+man paru        //see the user manual for paru

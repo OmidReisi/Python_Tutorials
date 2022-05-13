@@ -1,0 +1,16 @@
+//chage command (read as sage) allows us to manage acount and password expirations.
+
+sudo chage -E <date:2022-5-10> <username>       //change the expiration date for a user
+
+sudo chage -l <username>        //show the expiration for user 
+
+sudo chage -M <num> <username>      //set the maximum number of days between password changes for user
+
+//-1 means that password never expires
+
+sudo chage -m <num> <username>      //set the minimum number of days between password changes
+
+sudo passwd -l <username>       //lock a user out
+
+sudo passwd -u <username>       //unlock a user
+

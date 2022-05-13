@@ -1,0 +1,21 @@
+// sed is short for stream editor and is often used to filter and modify text
+
+sed 's/<term to search>/<term to replace the search term with>/' <path to file>      //change all accurences of a search term to the desired term and show the output of the file (DOES NOT MODIFY THE FILE ONLY SHOW THE CHANGES IN THE TERMINAL)
+
+// adding the -i switch modifies the file itself
+
+//the string you pass to the sed command consists of three sections:
+
+1. the "s" character that represents the type string.
+2. the <term to search> to replace them with another term.
+3. the <term to replace with> to replace the search term with it.
+
+//between these 3 sections must be a delimiter (the most used delimiter is "/")
+//but if our terms contain the "/" character we just change the delimiter to a "." or " "(space) or anything else.
+
+//you can remove searched terms in the file by not passing anything for the <term to replace with> section (like sed 's/hello// clears all "hello"s in a file)
+
+
+//REMEMBER THAT THE FIRST CHARACTER THAT COMES AFTER "s" IS THE DELIMITER
+//REMEMBER THAT THERE IS A DELIMITER AFTER THE <TERM TO REPLACE WITH> AS WELL
+

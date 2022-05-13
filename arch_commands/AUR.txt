@@ -1,0 +1,27 @@
+// AUR stands for arch user repository
+// AUR contains packages that might not be on the main repositories of archlinux
+
+//for instance google-chrome in not on the main repositories of archlinux
+
+//in order to install a package from AUR we go to https://aur.archlinux.org and search for the package name and go to the package page
+
+//in order to install the package there are three ways:
+
+1. using snapshots: we copy the link of Download Snapshot in the package actions box
+and in the terminal we type "wget <link>" and we get a compressed file
+then run "tar -xvf <compressed-file>" to extract the package directory(always check the PKGBUILD file for suspicious lines)
+some packages might need some dependancies before installing them so make sure you run sudo pacman -S base-devel for most common dependancies
+then run the "makepkg -s" in the PKGBUILD file directory
+after that  we see some files being added to the same directory and the package file that we need to install end with .zst
+then in the same directory we run "sudo pacman -U <package.zst>" to install the package (you can use makepkg -si to automatically install the package if it's built successfully and skip this step)
+
+
+
+2. using git (THE OFFICIAL ARCH WAY): first install git with with "sudo pacman -S git"
+git clone <git clone link>
+then cd into the cloned directory and run "makepkg -s" to build the package
+finally "sudo pacman -U <package.zst>" to install the package (you can use makepkg -si to automatically install the package if it's built successfully and skip this step)
+
+
+
+3.using an AUR helper like "yay" or "paru": paru is better than yay because it's written in Rust language, but yay is written in Go language and Rust is faster.(install yay or paru with one of the above methods)

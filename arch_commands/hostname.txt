@@ -1,0 +1,19 @@
+//hostname is usually shown after the @ sign in prompt
+
+hostname        //see your hostname
+
+//hostname is stored on /etc/hostname
+
+hostnamectl     //gives you your hostname with some extra information
+
+sudo hostnamectl set-hostname <new-hostname>        //change the hostname
+
+//you need to reboot in order for changes to take effect
+
+//you can set your hostname to a domain as well (like hostname.domain.com) but the bash prompt only shows hostname up untill the first "."
+
+//after setting your hostname you need to update the /etc/hosts file as well and set the following:
+
+127.0.0.1       localhost
+127.0.1.1       hostname.domain.com hostname        //the first part is unnecessary if you don't have a domain name
+

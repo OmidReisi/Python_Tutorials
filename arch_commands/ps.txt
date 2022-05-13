@@ -1,0 +1,19 @@
+//this command shows what processes are running on our server or system
+
+ps      //lists the processes running in current instance of terminal with their ID,the terminal number that process is running on,time consumption of cpu,and the actual command running on the process
+
+ps x        //shows all processes running in the  whole system
+
+ps -He      //shows the process hierarchy in the whole system
+
+ps -axjf    //shows all processes with full details(parentid,userid,parentgroupid,status,terminalid)
+
+//status ids: s(root process),S(process in uninterrupted sleep and waiting for user input),R(actively running),T(terminated process)
+// 0 is root userid, and first manually created userid is 1000
+
+ps aux      //shows cpu and memory usage as well and replaces userid with username (this is the most useful command)
+
+//if you create aliases in the terminal they're bound to that terminal session and will be deleted when that session closes.
+
+//in order to make your aliases permanant you need to add them to your ~/.bashrc for each user
+

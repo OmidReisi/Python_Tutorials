@@ -1,0 +1,52 @@
+//in linux in order to use storage volumes they need to be mounted and you can access them via the mount point
+
+lsblk       // show all the storage devices connected to the system
+
+you can access every storage device with /dev/<storage name>
+
+//names like sda, sdb, sdc, ... and nvme0n1, nvme0n2, nvme0n3 ,... are used for storage devices
+//but sda1, sda2 or nvme0n1p1, nvme0n1p2 are used for partitions inside storage devices
+
+//for every partion and storage device connected to the system there is a block special file in the path of it's name (for example if you run ls -l /dev/sda1 there is a /dev/sda1 file that it's permission string starts with b)
+
+
+
+mount       //show all mounted storage partitions on the system (there are some system partions as well)
+
+mount | grep <partion name>     //show only the mounted partition with the given name
+
+
+//in order to wipe a storage device it's better to unmount the partitions first
+
+sudo umount <path to partion name (like /dev/sda1) or the path it's mounted to (like /media/omid/disk)
+
+
+// you can wipe your storage volume with the fdisk command and make a partion table (always use GPT) to re-partion it.
+
+sudo fdisk <storage name like (/dev/sda)        //enter the fdisk mode for the storage volume(remember to always excute the write command with "w" to make the changes final)
+
+sudo mkfs.<format type> <path to partion name (like /dev/sda1)     // format a newly partioned storage device (you can add -n <label> to give it a label)
+
+//popular format types are "btrfs", "exfat", "ext4", ...
+//if you want to use your storage device on multipe systems like a flash drive use "exfat" file system
+// fat32 is another good option but it has 4G limit for file size and maximum of 2T for storage device
+
+
+in order to install exfat support for linux distributions follow:
+
+1.for debain and ubuntu use sudo apt install exfat-utils exfat-fuse
+2.for cetos and redhat use sudo dnf install fuse-exfat exfat-utils
+3.for arch use pacman -S fuse-exfat exfat-utils
+
+
+df -h       //show used and available space on mounted partions
+
+
+//sometimes you need to mount a storage partion manually and this means to assign a directory for it's access point
+
+//for temp storages use /media(external storage)
+//for permanant storages use /mnt(internal storage)
+
+//make a directory for the mount point in the appropriate location
+
+sudo mount <partion name (like /dev/sda1)> <target mount point (like /mnt/disk1/)       //mount a partion to its mount point (in this case "disk1" is the directory we created for mount point)

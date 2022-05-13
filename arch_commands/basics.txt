@@ -1,0 +1,58 @@
+man <command>       //shows the user manual for using the command
+
+cat <path to file>          //show the contents of a file
+
+cd <path to directory>      //change the directory (if no path is passed go to root and for each . go 1 level up)
+
+cd ~        //chagne the directory to HOME
+
+cd -        //change the directory to previous one
+
+su <username> switch user
+
+ls -la      //show the contents of the current path (-la switch shows more details)
+
+reboot      //reboot system
+
+shutdown    //shutdown system
+
+exit        //log user out
+
+ctrl+l(clear)      //clear screen
+
+reset       //reset the shell
+
+ctrl+u      //clear a line
+ctrl+a      //goto start of the line
+ctrl+e      //goto end of the line
+
+//you can seperate commands with ; and type them on the same line(continues even if the first command fails)
+//you can seperate commands with && and type them on the same line(but if error happens it doesn't continue')
+
+truncate -s 0 <path to file>        //setting size for a file(clearing the file when setting the size to 0)
+
+column -t       //piping this command to other commands when the output is to big makes sure that the output is organized in columns and it's more visible
+
+date        //show the current date and time
+
+head -n <num> <path to file>        //show the first <num> lines of a file (if -n is removed show 10)
+tail -n <num> <path to file>        //show the last <num> lines of a file (if -n is removed show 10)
+
+tail -f <path to file>      //show the end of the file and watch live when changes are made to it, ctrl+c to break out of it (useful when doing some system maintanance and watching the system log files)
+
+{var_name}={value}      //create a variable and give it a value (no space before or after =)
+
+ehco ${var_name}        //show the value of a variable
+
+//variables are only available in the terminal session they're created, in order to save variables save them to .bashrc file
+
+//you can refer to variables in quotes as well
+
+env     //show the available environment variables
+
+//by default user created variables are not part of the environment variables
+
+export {var_name}       //add the variable to the environment variables
+
+
+

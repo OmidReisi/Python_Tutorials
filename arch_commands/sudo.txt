@@ -1,0 +1,40 @@
+su -        //switch to root
+
+//sudo allows to use root privileges for normal users that have sudo privileges
+//to install sudo in arch use pacman -S sudo
+//based on the distribution of a linux machine users should be part of "sudo" or "wheel" group to have sudo privilages  (for arch it's wheel)
+//to see which group have sudo privilages see the following file as root: /etc/sudoers
+//the line that says allow to execute any command shows which group have sudo privilages
+
+
+sudo -l     //shows what the sudo allows you to do (for e.g. (ALL : ALL) ALL means you can do everything)
+
+sudo !!     //run the previous command with sudo
+
+//the /etc/sudoers file contains different users,groups and their privileges
+// for example privileges look like this ALL=(ALL:ALL) ALL
+//first ALL shows the host or server that you're allowd to execute commands on (usually it's ALL)
+
+root    ALL=(ALL:ALL) ALL   //the second ALL shows the users we can impersonate
+//the third ALL shows the groups we can impersonate
+//the last ALL show the commands we can execute
+
+//never edit the /etc/sudoers file directly with an editor
+//in order to edit the /etc/sudoers file use the following command: EDITOR=nano visudo
+//using visudo allows us to catch mistakes and makes the file secure.
+//if visudo catches an error it shows what now?
+//after seeing what now? here are your options:
+e       //for re-editing
+x       //for not saving the changes
+q       //save the invalid changes (never use this)
+
+//for example we add the following user
+
+useradd tux
+
+//then we add the following via visudo
+
+tux     ALL=(ALL:ALL) NOPASSWD: <path to rm>,<path to pacman>
+//if you add the "NOPASSWD:" you don't need to type your password when using sudo
+
+//in order to find the path to a command type which <command>

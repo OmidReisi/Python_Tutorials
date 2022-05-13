@@ -1,0 +1,25 @@
+history     //list of commands that have been run
+
+!{command-id}       //re-run a command from history
+
+//! is called bang in linux community
+
+sudo !{command-id}      //re-run a command from history with sudo privileges
+
+!!      //re-run the last command
+
+sudo !!     //re-run the last command with sudo privileges
+
+
+//in order to add data and time of commands in history go to .bashrc file in your home directory
+// and set the HISTTIMEFORMAT variable to HISTTIMEFORMAT="%Y-%m-%d %T " (space at the end is intentional)
+// setting the HISTCONTROL variable to HISTCONTROL=ignoreboth does not save the commands that start with a extra space at the begining
+// and this is a good thing because sometimes you run a command that contains sensitive information and you don't want that information to be shown in history so you run that command with a space at the begining
+
+
+history <num>       //show the last num of commands
+
+history | grep <term>       //show the commands in history that contain <term>
+
+using ctrl+r shortcut brings up a search in commands history and you can start typing to find the command that matches in history(press ctrl+r again to find the next match,ctrl+c to break out of this search)
+

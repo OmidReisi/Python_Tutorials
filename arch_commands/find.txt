@@ -1,0 +1,18 @@
+find <path to directory to start search from> -name *.txt       //find all files that end in .txt from the path given downward
+
+//you can pipe this command with grep to limit the search to specific directories
+
+find <path> -name <name>        //find files or directories that match the <name> exactly
+
+// you can add -type f for files or -type d for directories to search exactly for that type of objects
+
+
+
+find <path> -type f -name <name> -exec <command> {} +
+
+//you can execute a command on every file that the find command finds instead of showing them in terminal
+// the {} is just a place holder for every file that the find command finds
+// the + at the end is the terminate the find command at the begining of each iteration of running the -exec command
+
+find . -type f -name docs -exec rm {} +     //remove every file named docs from the current working directory downward
+

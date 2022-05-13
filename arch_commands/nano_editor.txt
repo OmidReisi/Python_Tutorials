@@ -1,0 +1,22 @@
+//nano is usually the default text editor on linux distributions
+
+pacman -S nano
+
+
+nano        //open a blank nano window
+
+//the carrot symbol (^) in menu represents ctrl
+//for example ctrl + o saves the file
+
+nano <path to file>     //edit a file
+
+
+nano +<num> <path to file>      //edit file starting from line number
+
+nano -v <path to file>      //open file in view-only mode
+
+
+touch <path to new file>        //create a new empty file
+
+//recreating a file with touch updates the modification time
+

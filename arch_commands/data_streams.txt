@@ -1,0 +1,24 @@
+//there are 3 main data streams: standard input(stdin), standard output(stdout),standard error(stderr)
+
+//standard input is when you input something like a command via keyboard.
+
+//standard output is the output of the command in terminal
+
+//standard error is like standard output but it represents an error that has occurred
+
+echo $?     //show the return code for the previous command(0: success, 1: error) (even if 1 error happens and the rest of the command is successful the return code is 1)
+
+//data streams have their own code for redirecting them: stdin=0, stdout=1, stderr=2
+
+<command> {stdcode}> <path to store stdcode output>     //in order to redirect a part of a output to somewhere else
+
+<command> 2> /dev/null      //don't show the stderr in the terminal output
+
+// /dev/null is like a blackhole and everything that is sent there is destroyed.
+
+//if no {stdcode} is defined then the default is stdout
+
+//if > is used then the destination file is overwritten but if >> is used then it's appended to the destination
+
+//you can mix stdout and stderr with each other like this : <command> > ~/results.txt 2> ~errors.txt
+

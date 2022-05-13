@@ -1,0 +1,27 @@
+//the following are the first characters of the files in their permission strings
+
+‘-’     //regular file 
+
+‘b’     //block special file 
+
+‘c’     //character special file 
+
+‘C’     //high performance (“contiguous data”) file 
+
+‘d’     //directory 
+
+‘D’     //door (Solaris) 
+
+‘l’     //symbolic link 
+
+‘M’     //off-line (“migrated”) file (Cray DMF) 
+
+‘n’     //network special file (HP-UX) 
+
+‘p’     //FIFO (named pipe) 
+
+‘P’     //port (Solaris) 
+
+‘s’     //socket 
+
+‘?’     //some other file type

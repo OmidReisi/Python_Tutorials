@@ -1,0 +1,20 @@
+groups <username>       //show the groups that a user is member of
+
+groups      //show available groups for current user
+
+//every user is part of it's own group
+
+// the /etc/group file shows the available groups
+
+groupadd <groupname>        //create a group
+
+groupdel <groupname>        //delete a group
+
+//in etc/passwd file the gid for every user is it's primary group
+//based on the distribution creating users usually creates the group same as user and sets the primary group for that user.
+
+usermod -g <groupname> <username>      //to change the primary group for a user (NOT RECOMMENDED)
+
+gpasswd -a <username> <groupname>       //add user to a group (works same as usermod -aG <groupname> <username>)
+
+gpasswd -d <username> <groupname>       //remove a user from a group

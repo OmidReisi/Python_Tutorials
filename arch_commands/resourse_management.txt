@@ -1,0 +1,22 @@
+free -m     //show the ram and swap usage in megabytes
+
+//the difference between free and available fields is that the free field shows the amount of space that is completely free but available field shows free space + space that is cached for processes
+
+df -h       //show the storage usage
+
+//in linux file systems there are two ways you can fully occupy you r hard drive:
+
+    1. when you use all the available space on your disks
+    2.every linux distribution gives you a maximum number of files and directories (inodes) that you can have on your different disks and you can't have any more files if you reach that limit even if you still have free space
+
+
+df -ih      //see the maximum number of inodes and inode usage for each partion
+
+
+// load average = number of tasks that need cpu attenance / number of tasks that all your cpu cores can handle at a moment in time
+
+//there are three values for load average that shows load average for last minute, last 5 minutes, last 15 minutes consecutivly from left to right
+
+uptime      //show the uptime and load average of a system
+
+

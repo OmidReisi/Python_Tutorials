@@ -1,0 +1,21 @@
+echo <text>     //print the text to the terminal (echo "Hello world!")
+
+msg="Hello World"       //creating a variable
+
+echo $msg        //print the variable
+
+env     //show the available environment variables in this session
+
+echo $HOME      //path to home directory
+
+echo -e "\a<text>      //audio output of the text (-e allows you to edit the input \a is for audio output)
+
+echo -e "This is a\b linux system"      // \b clears the previous character so we don't see "a"
+
+echo -e "This is a linux\c system"     // \c clears everything that comes after it
+
+\n :newline after it
+\t: tab after it
+
+
+// you can echo to a file with > (overwrite) or >> (append)

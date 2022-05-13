@@ -1,0 +1,45 @@
+//when you shutdown your system all of your storage partions, unmount from their mount point
+
+// etc/fstab file is a file that mounts storage partions automatically on boot
+
+//in order to add an auto-mount to the fstab file add a line break between the contents of the file and your new line
+
+//the fields you need to fill for an auto-mount are <file system> <mount point> <type> <options> <dump> <pass>
+
+1.file system: for  file system you can either use the partions name or it's UUID (like /dev/sdb1)
+
+2.mount point: for mount point you pass the path you want to mount the partion to (like /mnt/mydisk, note that the directory should be created manually)
+
+3.type: for the type you pass the file system used by the partion (like swap,ext4,btrfs,...)
+
+4.options: for the options you pass the options you want to use for the mounted partion (usually it's set to defaults)
+
+//the "defaults" option refers to the following options: rw,suid,dev,exec,auto,nouser,async (for example rw means read and write permissions for the partion)
+
+5.dump:an integer representing the file system dump (always set to 0,dumping is usually not used anymore but 0 means to backup and dump the file system)
+
+6.pass:an integer representing the order of file system integrity checking, and this means that when you have a problem and FSCK (FILE SYSTEM CHECKER) need to run in a certain order (0 means it's not going to run and not checking it at all and other numbers represet the order it needs to run)
+
+
+
+NOTE: ALWAYS CREATE THE MOUNT POINT DIRECTORY MANUALLY BECAUSE THE SYSTEM CAN'T MOUNT THE PARTION IF THE DIRECTORY DOESN'T EXIST
+
+//if you have an auto-mount on the fstab file you can mount it with "sudo mount <mount-point>" and in this case we didn't even pass the partion name because the system automatically recognizes a device match with the given mount point
+
+sudo mount -a       //mount all auto-mounts in the fstab file (this is an error check for fstab file and if it runs successfully it means most likely fstab file has no errors, but remember this test doesn't guarantee anything so manually check the fstab file before saving it)
+
+
+//using the partion device name for the file system part is not recommended because when you insert your flash drive it might take a different name than the previous one (for example the first time it's sdb1 and the second time it's sdc1)
+
+// UUID stand for Universaly Unique Identifier and unlike the storage name it never changes and is the same thing for one device all the time
+
+sudo blkid      //list all the storage devices connected to the system with their UUID
+
+//in the file system part of fstab file use UUID=<UUID of a storage device> (like UUID=38b3e4...) to make sure that your auto-mount is not dependant on the name of the storage device
+
+//you can prevent the auto-mount from the boot with adding the "noauto" option to your options section(if a storage has the "noauto" option then "sudo mount -a" still won't mount it)
+
+//defaults in the options contian the "auto" option and you can use defaults,noauto to overwite it.
+
+// ro is for read-only storage devices and is recommended for shared storages that you don't want everyone to have write access to it
+

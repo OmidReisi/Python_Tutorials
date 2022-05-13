@@ -1,0 +1,13 @@
+// foreground tasks are the commands that we run on the terminal and see the output in front of us
+
+//ctrl+z puts the current command and output in the background and give you back the command line
+
+
+<command> &     //send the command to the background from the start
+
+jobs        //list all the background jobs with their <jobid>
+
+fg      //bring up the most recent background job to the foreground
+
+fg <jobid>      //bring up the job with the <jobid> to the foreground
+

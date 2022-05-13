@@ -1,0 +1,36 @@
+// when you run ls -l command the first column shows a string that contains the permissions for that file or directory
+
+//if the first character is "d" then it's a directory and if it's "-" it's a file
+//the 9 remaining characters are seperated into 3 groups of user, group and world (others, neither of user and group) respectively 
+//each group has 3 characters that are "r", "w", "x" in order or there's "-" instead of them
+
+// r: if there is "r" it means that user, group or world has read access and if it's "-" it means no read access
+// w: if there is "w" it means that user, group or world has write access and if it's "-" it means no write access
+// x: if there is "x" it means that user, group or world has execution access and if it's "-" it means no execution access
+
+// x for files means executing them or running them (like a script) and for directories it means navigating inside of directory.
+
+
+//you can change the permissions for a file or directory with chmod command
+
+chmod +rwx <path to file>      //add r,w,x for all 3 groups(user,group,world) you can use 1 or 2 permission as well(+r,+rx)
+chmod -rwx <path to file>
+
+
+chmod g+rwx <path to file>     //apply permissions for group only
+chmod u-rwx <path to file>     //apply permissions for user only
+chmod o+rw <path to file>      //apply permissions for world(others) only
+
+//you can use numerical values to change permissions for a file or directory
+// r=4, w=2, x=1 these are the values for each permission
+//use chmod with a 3 digit number that each number represents user, group, world respectively from left to right and each number is sum of permissions for that section
+
+chmod 770 <path to file>        //rwx for user, rwx for group and no permissions for world
+
+//there is a -R switch that applies the permission for inside of the directory as well recursively.
+
+chown <username>:<groupname> <path to file or directory>        //change the ownership(user and group owner (passing the group is optional)) of the file or directory(-R for change ownership of directory contents recursively)
+
+//chown needs root privilages
+//if you do chown <username> <path to file> then it only changes the user owner and not the group owner
+//but if you do chown <username>: <path to file> it defaults the group owner to the user owner's primary group that you're passing

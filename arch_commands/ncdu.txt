@@ -1,0 +1,15 @@
+// ncdu is a tool to manage storage spaces on your server or workstation
+
+sudo pacman -ncdu
+
+
+sudo ncdu <path>       //scan from the given path and list the files and directories with their useage rate
+
+sudo ncdu /     //scan from root (all storage devices)
+
+
+//you can navigate the directories and enter them (with enter key)
+//press q to exit from ncdu
+
+//adding the -x switch ignores the external mounted devices like flash devices and only shows the local file system hierarchy
+

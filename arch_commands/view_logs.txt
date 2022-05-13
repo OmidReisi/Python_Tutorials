@@ -1,0 +1,5 @@
+cat /var/log/syslog      //syslog shows all kind of different logs for your systems
+
+dmesg      //show the contents of /var/log/dmesg that keeps the logs related to the hardware
+
+

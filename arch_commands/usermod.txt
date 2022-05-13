@@ -1,0 +1,19 @@
+// usermod command is all about modifying users (you need to be root or run sudo before each command)
+
+usermod -aG <groupname1>,<groupname2>,... <username>      //add a user to a group or multiple groups seperated by commas(the group and user should be existing)
+
+//for changes to take effect you need to log out and log back in
+
+
+usermod -d <path to new home> --move-home <username>        //change the home directory of a user(--move-home switch moves the content of the current home as well)
+
+usermod -l <new_username> <current_username>        //change the username for a user
+
+usermod -L <username>       //lock a user out
+
+usermod -U <username>       //unlock a user
+
+usermod <username> -e <date:2022-5-10>      //set an expiration date for the user
+
+chage -l <username>     //show the account information for a user
+

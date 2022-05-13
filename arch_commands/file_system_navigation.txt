@@ -1,0 +1,32 @@
+ls -la <path to directory>      //show the contents of the directory (-l for detaild and -a for all files including hidden ones)
+
+
+// ~ means that you're in your home directory(/home/<username>)
+
+pwd     //path to current working directory
+
+// file system starts at a / (root)
+
+// /boot directory contains files necessary for booting the system
+// /etc directory contains config files and settings for applications on system and usually backups are stored in /etc
+// /if you save a config file to your /home/{username} directory then those config files only apply to the user but if you save then in /etc then those configs apply to the whole system
+// /home directory contains home directories for different users
+// /media and /mnt directories are used for mounting different storage volumes(/mnt for internal and servers and /media for external drives)
+// /root directory is the home folder for root user
+// /opt directory is for storing additional things and user has full control over it
+
+mkdir <folder-name>     //creating a new directory(-p to allow folder hierarchy)
+
+rm <path to file>       //removing a file
+
+rm -r <path to directory>   //removing a directory(removes contents inside of it as well)
+
+rmdir <path to directory>   //remove an empty directory
+
+mv <path to file> <path to destination>     //move an object or rename it
+
+
+
+
+
+

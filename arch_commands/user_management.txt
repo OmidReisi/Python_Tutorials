@@ -1,0 +1,29 @@
+//run sudo or login as root for following commands
+
+useradd <username>      //add a user(based on the distribution it might add user home directory as well)
+
+// the etc/default/useradd allows you to change the defaults for useradd command
+// the /etc/passwd shows all the available users and system users
+
+cat /etc/passwd | wc -l     //wc is for word count and -l is for number of lines so this shows number of available users
+//the x shows that the password is hashed
+//the number after : shows the userid of each user
+//the second number after : shows the groupid
+
+// the /etc/shadow file shows the hashes for each user and their password activity
+
+userdel <username>      //delete a user account (doesn't delete the user's home directory by default)
+
+
+useradd -m <username>       //this switch makes sure a home directory is created
+
+userdel -r <username>       //make sure home directory is deleted as well
+
+passwd <username>       //change the password for a user (if no username is passed change to password for the current account you're loged in with)
+
+useradd -r <sys-username>       //add a system user
+
+//system users are used when you want to automate a task and the tasks you automate are not user dependant.
+
+//system users get the id of less than 1000 and that's because in most distributions id of more than 1000 gets a login window and we dont' want that for our system users.
+

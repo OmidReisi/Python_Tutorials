@@ -1,0 +1,30 @@
+//symbolic links are a way to link one object to another
+
+// an inode is a data object that contains metadata about files and directories.
+// inodes contain all the information about your file or directory except it's name and it's content
+//every storage medium has their specific inodes, this means that a file on your ssd might have the same inode as a file on your flash drive
+
+
+ls -i       // -i switch shows the inode for your files and directories
+
+// links are same as shortcuts in windows
+
+
+ln -s <path to file you want to link to> <path for the link>        //create a symbolic link for a file(don't use relative path for creating links)
+
+//symbolic links start their permission string with an "l"
+
+// the symbolic link and the file it points to are completely different objects, therefore they have completely different inodes
+
+// symbolic links are also called soft links if we remove the -s switch in the ln command we create a hard link
+
+//hard links start their permission string with a - and don't start it with an l
+
+//hard links have the same inode as their original file, and this means that a hard link and the file itself are actually the same objcet
+
+// a hard link is a duplicate entry of the original object
+// hard links can't be moved to different storage medium because it's inode has no meaning there and it might already be taken in the other storage medium
+
+//using relative path for symbolic links makes them invalid
+//but for hard links it's okay to use relative path because they contain the content of the object
+

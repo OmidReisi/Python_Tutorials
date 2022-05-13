@@ -1,0 +1,26 @@
+//awk is a scripting language that let you manipulate text
+
+//you can use awk to create filters(get text via stdin, filter it and send it out with stdout)
+
+//by default awk sees \b (space characters like " ", "\n", "\t") as the delimiter that seperates the fields(columns)
+
+//the way that awk works is like this: awk <command> <file to work with>
+
+
+awk '{print}' <path to file>        //print the file to the terminal
+
+
+awk '{print $1}' <path to file>     //print only the first field for every line(changing the number changes the column it prints, passing $0 means the whole text(like passing nothing))
+
+awk '{print $1,$3}' <path to file>      //print two or more fields by seperating them with ","
+
+
+//you can pip awk to another commands to filter the commands output instead of passing a file
+
+ls -l | awk '{print $1,$3}'
+
+
+awk '{print $NF}'       //print the last field (NF= number of fields = last field number)
+
+
+awk -F':' <command>     //changing the delimiter from " " to ":"

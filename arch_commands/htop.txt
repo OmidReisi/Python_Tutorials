@@ -1,0 +1,12 @@
+//htop is one of the best tools for managing resources on your linux system
+
+pacman -S htop
+
+htop        //to start htop
+
+// you can navigate htop with arrow keys
+// shift+p sorts by cpu usage
+// shift+m sorts by memory usage
+
+//you can groupby processes by users with pressing u
+//to kill a proccess first send the "SIGTERM" signal and if it doesn't work send the "SIGKILL" signal

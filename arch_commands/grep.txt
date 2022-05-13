@@ -1,0 +1,23 @@
+//grep stands for global regular expression print
+
+//with grep you can search for texts in files
+
+cat <path to file> | grep <text>    //show only lines that contain text
+
+cat <file> | grep -v port      //show  lines that don't contain port (-v reverses the command)
+
+grep <text> <path to file>        //you can also use grep without piping it with the cat command
+
+// adding the -n switch shows the line number of search result in the file
+
+// -c switch prints the number of times that <text> appears in the <file>
+
+//by default grep is case-sensitive and adding the -i switch makes it case-insensitive
+
+grep <text> *       //show every instance of every file that has the text in the current working directory
+
+// adding the -r switch searchs from the current working directory downward recursively
+
+
+
+
