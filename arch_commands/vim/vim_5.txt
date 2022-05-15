@@ -1,0 +1,12 @@
+//you can split a screen between two files as well
+
+//open the first file and in "command mode" type ":split <path to file>" to open the second file in split mode (split them horizontally)
+
+//use ":vsplit <path to file>"(or ":vs" for short) to open them in vertical split mode
+
+//the file that it's name is bold is the file that you control
+
+//to switch the file you control press "ctrl + ww" in "command mode"
+
+//you can open the same file twice in split mode as well, in this case changing the file updates it in both splits live
+

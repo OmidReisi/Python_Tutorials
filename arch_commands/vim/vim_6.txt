@@ -1,0 +1,20 @@
+//in "command mode" type ":set number" or ":set nonumber" to show or hide line numbers respectively
+
+//to change the default of showing the line numbers
+
+//in order to show the line numbers everytime save the changes to your .vimrc file in home directory
+
+// remove ":" from commands while adding them to the .vimrc file
+
+vim +<line number> <path to file>       //open the file and put the cursor at the start of the line
+
+//you can add comments to your files with a double quote (") at the start of your comment without closing it
+
+//deleting a line with "dd" puts it in your past buffer and you can paste it with "P" (cutting the lin)
+
+//in "command mode" type ":badd <path to file>" to add a buffer to vim without switching to it
+
+vim -O <path to file1> <path to file2>      //open two file in vertical split mode (use -o to split them horizontally)
+
+
+

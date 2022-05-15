@@ -1,0 +1,12 @@
+// in "command mode" press x to forward delete a character at a time
+
+// "dd"(press d twice quickly) to delete the whole line
+
+// in "command mode" type ":r <path to file>" to insert contents of the the given file to the current file (starting from the cursor position)
+
+// along side your arrow keys you can navigate the file in command mode with "h"(left), "j"(down), "k"(up), "l"(right) keys
+
+// prss "ctrl + z" in "command mode" to put vim in the background jobs 
+
+// in "command mode" you can type ":! <linux-command>" to automatically put vim in the background and run a linux command and after the command is finished press "Enter" to bring vim back to the foreground
+

@@ -1,0 +1,24 @@
+//vim is the default text editor for most linux distributions
+
+//when you startup vim or open a file with it you are in "command mode"
+
+//in order to go to "insertion mode" you press i (doesn't change the position of the cursor)
+
+//press "esc" to return to "command mode"
+
+// in order to save changes type ":w" in "command mode" followed by a "file name" to save the changes if you opened vim in buffer mode (opened vim without specifying a file)
+
+// if you add a file name after ":w" when you've already opened a file with vim it saves the changes to the new file
+
+// ":q" in "command mode" to quit the vim
+
+//when in "command mode" press "shift + a" (capital a) to go to "insertion mode" (puts the cursor at the end of the file)
+
+// ":q!" to quit without saving the changes
+
+// in "command mode" press "u" to undo the last change
+
+//you can stack commands as well e.g. type ":wq" to save and quit
+
+// in "command mode" press "0" to go to the start of the line and "$" to go to the end of the line (home, end keys do the same things respectively)
+

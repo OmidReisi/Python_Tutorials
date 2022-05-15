@@ -1,0 +1,10 @@
+//in vim when you open a file (or create a new one) while you're editing you're changing the "buffer" untill you save the changes
+
+//you can have multiple active buffers in vim
+
+//in order to add another buffer to vim in "command mode" type "e <path to file>" or "enew" to add another buffer
+
+//you can switch between buffers with "bp" and "bn" in "command mode" (bn: buffer next, bp: buffer previous)
+
+//remember to save each buffer seperately because typing ":q" closes all buffers or use ":bd" to close each buffer seperately (bd: buffer delete)
+

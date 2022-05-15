@@ -1,0 +1,16 @@
+//you can enter "visual mode" by pressing "v" in "command mode"
+
+//when in "visual mode" moving around the file highlights the text
+
+//press "y" in "visual mode" to copy the highlighted text (the character that cursor is blinking on is also included)
+
+//press "p" in "command mode" to paste the copied text
+
+//when in "visual mode" press ":" to enter a command for the highlighted text e.g. type "sort ui" to sort the highlighted lines alphabetically
+
+//in "command mode" type ":%s/<text to change>/<text to replace with>/g to find and replace all occurrences of the given text
+
+//press "gg" in "command mode" to go to the top of the file and "shift + g" to go to the bottom of the file
+
+
+
