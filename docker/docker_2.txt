@@ -1,0 +1,6 @@
+Docker Installation:
+
+    1.windows: visit http://docker.com download the file and install it with preset options,after finishing the installation and installing the wsl2 kernel update open cmd and run "docker" to list the commands then run "docker run hello-world" to see if docker is working properly
+
+    2.archlinux: before installing docker update mirrorlist and upgrade all packages then run "sudo pacman -S docker" and use systemctl to activate it, you can add your user to "docker group" to use docker without sudo with "sudo usermod -aG docker <user>" command
+

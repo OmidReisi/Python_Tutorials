@@ -1,0 +1,31 @@
+//we can automate the process of creating new images with a "Dockerfile" (note that the file name that we use to build a docker image should be exactly "Dockerfile" with a capital "D" and no extension)
+
+//the contents of the Dockerfile should be like following:(this is an example that we build an image from ubuntu docker image and installing apache and vim-nox and setting the entry point to run apache)
+
+    FROM <docker image we want to build from>
+    MAINTAINER <username> {<email>}         //(put email inside of <>)
+
+    #Skip prompts       //all lines that start with # are comments and not necessary but good for making the file readable
+    ARG DEBIAN_FRONTEND=noninteractive      //this line makes sure that in the midle of building the image we don't ge asked questions by the prompt and it's debian specific (for example we're building our image from an ubuntu image)
+
+    #Update packages
+    RUN apt update; apt dist-upgrade -y         //-y makes sure the answer is Y in [y/n] situations
+
+    #Install packages
+    RUN apt install -y apache2 vim-nox
+    
+    #Set entrypoint
+    ENTRYPOINT apache2ctl -D FOREGROUND
+
+
+//after saving the Dockerfile run the following command
+
+docker build -t <new docker image name>:<version number> <path to directory that contains Dockerfile>       //build a new docker image from a Dockerfile (if the Dockerfile is in the same directory of cwd just put a "." )
+
+
+docker rmi <docker ID>      //remove a docker image from your local host
+
+//if a containter is using or has used that image (even if it's stopped) first you have to completely remove that container then remove it's docker image (you have to remove it from "docker ps -a" history)
+
+
+docker rm <container ID>        //remove a container from history

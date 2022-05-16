@@ -1,0 +1,18 @@
+//the following command work on all operating systems
+
+docker images       //list all docker images that we've downloaded and are locally available on our machine
+
+docker search <keyword>        //search for a docker image with a specified keyword and find it's name
+
+docker pull <docker image>      //download the docker image with it's name
+
+docker run <docker image>       //run the container created from the given image(if it's locally unavailable it looks for it online and downloads it first)
+
+//containers will exit if they don't have any job to do, but some containers start with a job in order to keep them running (also called an entry point command)
+
+docker ps       //list all containers running on system(adding -a shows containers that ran previously as well)
+
+docker run -it <docker image> <command>(optional)       //give a container a job to keep it running (-it gives the container a interactive tty (shell) to run)
+
+//all the changes you make to a container go away if you don't save them because a docker image is a blueprint than creates the container from scratch every time
+

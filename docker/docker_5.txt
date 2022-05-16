@@ -1,0 +1,28 @@
+//some containers have an entry point command that keep the container running
+
+//for example "nginx" which is a popular proxy and web server application has an entry point command that keep the container running and does not get back to shell
+
+//by default this container is completely useless because we can't even access it and by default we can't even access an application by default via tcp/ip when it's running inside a container
+
+docker run -it -d -p 8080:80 nginx      //-p allows you to specify a port
+
+//by default like most web servers nginx runs on port 80
+
+//by default ports that are open inside a container are not accessable outside of container
+
+//so if we need to access a port inside a container we need to create a port mapping from a local port on the host system to the port inside the container
+
+//so in above command we're mapping port 8080 from the host to port 80 of the container
+
+ip addr show (or "ip a" for short)      //show the ip address of your host
+
+ipconfig        //same as above for windows
+
+//type "host_ip:8080" in a browser to see the nginx welcome message
+
+//type "localhost:8080" to do the same without using your ip address
+
+//adding "--restart unless-stoped" switch to the docker run command keeps the container running unless the "docker stop" command ir run with it(for example "ctrl + c" restarts the container and doesn't stop it)
+
+docker run -it -d --restart unless-stopped -p 8080:80 nginx     //keep the nginx runnning unless it's specifically stopeed with "docker stop"
+

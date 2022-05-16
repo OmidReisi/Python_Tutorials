@@ -1,0 +1,10 @@
+docker run -it -d <docker image>       //adding the -d switch keeps the container running in the background (the deamon(service) mode that keeps the service running in the background)
+
+docker attach <container ID>        //bring a background container to the foreground
+
+docker stop <container ID>      //to stop a container(exit from a background container)
+
+//you can shorten a <container ID> by as many characters as you want if it's distinguishable from other IDs
+
+//press "ctrl + pq" to put a container in the background
+

@@ -1,0 +1,23 @@
+//docker is a platform that runs containers
+
+//a container bundles an application's code and all it's dependencies into one object
+
+//containers typically use less resources than virtual machines
+
+//docker containers can run almost everywhere, if docker is installed on the host a container can be run on the host like a server, laptop, desktop, virtual machine, ...
+
+//containers can be easily copied and deployed (it's easier to deploy a container than a VM because it's lighter)
+
+//just like VMs applications that run in containers are seperated from the rest of the host system (this adds a bit of a security benefit)
+
+//containers can often be cheaper to run than VMs (you can run more containers than VMs on a specific host)
+
+//docker containers can be run on platforms such as AWS, Linode, Digital Ocean, Google Cloud, and others
+
+//not all apps are supported when run in containers(some companies don't support their apps being run in containers)
+
+//performance can sometimes be inconsistent
+
+//docekr containers are essentially linux containers and they best preform on linux systems
+
+//if you run docker containers on different OS than linux-distributions, they're going to be run on a linux VM and there might be a slight performance hit

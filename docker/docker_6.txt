@@ -1,0 +1,15 @@
+docker commit <container ID> <new container name>:<version number>          //to save the changes you've made to a container save under a new container
+
+//after saving the new container we see it in the list of "docker images" with the given name and tag of <version number>
+
+//now if we create a new container from the new docker image all are modifications are available    
+
+//when you want to run your new docker image you should run with "dockerimage:version number"
+
+//we've installed apache on our new image but when we run the container apache is not running because we didn't specify an entry point for container to run apache at the start
+
+docker commit --change='ENTRYPOINT ["apachectl", "-DFOREGROUND"]' <container ID> <new name for docker image>        //this saves the container on a new docker image with it's entry point being running apache
+
+//now if we run our ubuntu container with it's entry point running apache we get the default welcome page of apache2
+
+docker run -d -it -p 8080:80 <docker image>
