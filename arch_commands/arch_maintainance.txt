@@ -1,0 +1,25 @@
+systemctl --failed      //list systemd services that have failed
+
+sudo journalctl -p 3 -xb        //see the system logs
+
+paru -Syu       //update the system once  every 2 days
+
+paru -Sc        //remove unused cached packages (type Y for all questions) (run once a week)
+
+paru -Scc       //remove everything from cache whether they're installed or not installed (run once a week)
+
+paru -c       //remove unwanted dependancies
+
+paru -Qtdq       //list of orphan packages
+
+{paru -Rns $(paru -Qtdq)} or {paru -Qtdq | paru -Rns}       //remove orphan packages
+
+du -sh .cache/      //see the size of cache directory
+
+rm -rf .cahce/*     //remove contents of cache directory
+
+// the last two commands can be used for /var/log/journal directory as well
+
+sudo journalctl --vacuum-time=2weeks        //only keeps the logs from past 2weeks
+
+sudo reflector -c Iran -c "United States" -c "United Kingdom" -c "Germany" -a 6 --sort rate --save /etc/pacman.d/mirrorlist     //keep the mirrorlist updated with specified countries and servers that have been updated in the last 6 hours
