@@ -1,0 +1,15 @@
+//wget allows us to download something from the internet using the terminal
+
+wget <url>	//download the file linked with the url and save it in cwd
+
+wget -O <new name> <url>	//download the file and save it as the new name
+
+wget -P <path to store> <url>	//store the file in the given path
+
+//if a download gets interupted adding the -c switch to the same exact wget command should continue and not restart the download
+
+//you can create a text file containing a list of links for download to download all the links in the file
+
+wget -i <path to list of urls to download>	//download all the urls stored in the text file
+
+
