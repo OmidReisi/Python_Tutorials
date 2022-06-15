@@ -1,0 +1,51 @@
+>>: shift the line to the right(indent)
+<<: shift the line to the left(unindent)
+
+// if you're in visual mode just press > or < to shift the selection
+
+//in visual line mode (shift + v) you can only select lines and not part of lines
+//in visual block mode (ctrl + v) you can select columns and not lines(moving forward or backward selects or deselects that column on every line that is selected and up and down keys selects the lines to contain their columns)
+
+==: auto indent the current line
+gg=G:	auto indent the whole file
+
+/<search term> + enter: search for something from the start of the file (n to find the next match and N to find the previous match)
+?<search term> + enter: search for something from the end of the file (N to find the next match and n to find the previous match)
+
+*: find the next match of the word your cursor is on
+#: find the previous match of the word your cursor is on
+
+//you can mark different parts of the file and jump back and forth to them
+
+m<char for mark>: mark the current line
+'<char for mark>: jump to the marked line
+
+zz: center the current line so you have room for more typing
+
+:%s/<term to replace>/<term to replace with>/g: replace all the occurances of the selected term with the new term
+
+//you can replace a term only in the selection in visual mode by typing :s/<term to replace>/<term to replace with>/g
+
+.: execute the last command
+
+//when you delete something (using the d command) you're actually cutting it
+
+//you can see your clipboard with :reg
+
+//you can paste a diffrent text than the last copy by typing "<reg number>p
+
+//in the registery the first line is your last copy
+
+//you can also copy a text to an specific registery as well as your last copy with "<reg number> and then copying (e.g "<reg number>yy)
+
+"0p: paste the last thing you've copied even if you've deleted (cut) some text before pasting
+
+//macros are basically a sequence of commands that is recorded and can be used later
+
+q<char to save marco as>: starts recording a macro
+
+q: to stop recording the macro
+
+@<macro char>: execute the recorded commands on the macro on the selection or the current line
+
+

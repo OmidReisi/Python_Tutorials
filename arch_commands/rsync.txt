@@ -1,0 +1,7 @@
+//rsync allows us to sync data from one location to another
+
+rsync <path to source> <path to destination>		//backup source data to your destination
+
+rsync -avzz --delete <path to source> <path to destination>	// a switch is for file ownership,recursive mode and some more switches combined in one switch, v is for verbose mode and prints in terminal that the backup was successful, zz is for backup compression and --delete is for keeping the destination in sync with source when we backup again (if a file is deleted from the source deletes it from the destination as well)
+
+

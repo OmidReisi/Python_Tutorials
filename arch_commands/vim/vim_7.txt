@@ -1,0 +1,74 @@
+//you can enter the insert mode with different characters
+
+i: starts typing before the cursor focus
+a: starts typing after the cursor focus
+o: starts typing a line after the cursor focus(goes to a new line after the current line)
+
+I: starts typing from the start of the current focused line
+A: starts typing from the end of the current focused line (appends to the line)
+O: starts typing a line before the cursor focus(goes to a new line before the current line)
+
+// you can repeat operations by typing a number before the operation (e.g. you can go 5 lines down by typing 5 and pressing the down key or "5 + u" to undo last 5 changes)
+
+home: go to start of the line
+end: go to end of the line
+ctrl + home: go to start of the file
+ctrl + end: go to end of the file
+e: go to the end of the word
+w: jump to the next word
+b: jump back a word
+dw: delete a word(if your cursor is in the middle of the word delete the rest of the word forward)
+2dw or d2w: delete 2 words
+db: delete a word backward (if your cursor is in the middle of the word delete the rest of the word backward)
+2db or d2b: delete 2 words backward
+diw: delete the word that your cursor is on (doesn't matter the position of the cursor)
+ciw: change the word that your cursor is on (doesn't matter the position of the cursor)
+d + home: delete everything before the cursor in the line
+d + end: delete everything after the cursor in the line
+
+//you can use some special character to modify the text in between them like: {,[,(,"
+
+di"	: delete the text between the quotation marks (also ci", yi")
+di(
+di[
+di{
+
+//you can jump to opening and closing tags of brackets with %
+
+d%: delete the opening and closing tags and contents between them
+
+//same commands apply for coppying as well (yiw, yw ,y + home, y + end, yb)
+
+
+yy: copy the whole line
+dd: delete the whole line
+cc: same as dd but enters the insert mode after it deletes the line (used for changing the line)
+D: delete the rest of the line from cursor forward
+C: change the rest of the line from cursor forward
+Y: same as yy copies the whole line
+r: replace the character under the cursor with a new character
+//when copying whole lines p pastes after the current line and P pastes before the current line and when you copy selections p pastes after the cursor and P pastes before the cursor
+
+//in visual mode:
+
+d: delete the selected text
+y: copy the selected text (yanking) and press p in normal mode to paste
+c: delete the selection and enter the insert mode to change it
+r: replace the selection with a single character (put the desired character in place of each of the selected characters)
+
+
+
+//in normal mode:
+
+t<char>: jump to position before the next <char>
+f<char>: jump to position of the next <char>
+dt<char>: delete everything up to the next <char>
+
+// T<char>, F<char> jump to the previous char (T<char> jumps to possition after the previous char)
+
+gg: go to the first of the file
+G: go to the end of the file
+0: go to the first of the line
+$: go to the end of the line
+<num>G: go to the line number
+:<num>: go to the line number

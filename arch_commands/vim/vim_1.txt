@@ -18,6 +18,8 @@
 
 // in "command mode" press "u" to undo the last change
 
+//in "command mode" press "ctrl + r" to redo changes
+
 //you can stack commands as well e.g. type ":wq" to save and quit
 
 // in "command mode" press "0" to go to the start of the line and "$" to go to the end of the line (home, end keys do the same things respectively)
