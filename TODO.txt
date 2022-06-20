@@ -7,3 +7,6 @@ django
 5 common mistakes and mutable default arguments
 matplotlib
 pandas
+thread local data
+race conditions
+locks

@@ -1,3 +1,0 @@
-thread local data
-race conditions
-locks
