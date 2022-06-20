@@ -1,0 +1,9 @@
+sqlite3
+unit testing
+job interview
+flask
+django
+10 tips and tricks
+5 common mistakes and mutable default arguments
+matplotlib
+pandas
