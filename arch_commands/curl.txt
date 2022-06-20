@@ -1,0 +1,17 @@
+//curl is a utility that allows us to transfer or get data from a network server with the supported protocols
+
+//the supported protocols are: http, https, ftp, ftps, sftp, dftp, ...
+
+curl <server>	//see the contents of the server (usually it's html)
+
+//it's very important that you specify the protocol before the server (e.g. https://google.com)
+
+curl -o <path to save the contents> <server>	//save the output to the given path
+
+//by default curl doesn't redirect the url in order to handle redirects add the -L switch
+
+curl -I <server>	//see the response headers instead of the response itself
+
+curl -v <server>	//see the connection details like the tls handshake and advanced connection details
+
+

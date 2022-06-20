@@ -1,0 +1,9 @@
+//ping command allows us to send a ping and get a response if we have a connection
+
+ping <ip> ( ping <address> )
+
+// the ping command uses icmp(internet control message protocol) network traffic to reach a server by sending an icmp echo request and the server responds with an icmp echo response
+
+ping -c <count> <ip or address>		//control how many ping requests to send
+
+// 8.8.8.8 is one of google's dns servers and is the most common ip used for checking the internet connection 
