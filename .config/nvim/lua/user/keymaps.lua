@@ -1,3 +1,4 @@
+
 -- Shorten function name
 local keymap = vim.keymap.set
 -- Silent keymap option
@@ -64,6 +65,8 @@ keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 
+-- Better paste
+keymap("v", "p", '"_dP', opts)
 
 -- Plugins --
 
