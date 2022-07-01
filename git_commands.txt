@@ -22,7 +22,7 @@ git add <path>      //add all the files downward from the path to the staging ar
 git add --no-all <path>     //same as above but ignores the deleted files
 git add -u       //same as git add -A but ignores the untracked files (only adds modified and deleted files)
 git add -u <path>       //same as above but downward from the path
-
+git add -p <file>       //only stage partial changes from a file
 
 git reset <file>        //remove a file from the staging area (before committing the file)
 git reset       //remove all files from the staging area
